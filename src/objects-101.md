@@ -1,9 +1,4 @@
-+++
-title = "Objects & Classes"
-weight = 3
-[extra]
-show_toc = true
-+++
+# Objects & Classes
 
 Object-Oriented Programming (OOP) is a way of organizing data (aka State) and code (aka methods, functions, Behavior) into classes and objects. 
 

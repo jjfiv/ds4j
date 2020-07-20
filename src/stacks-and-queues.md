@@ -1,12 +1,6 @@
-+++
-title = "Stacks & Queues"
-weight = 5
-[extra]
-show_toc = true
-+++
+# Stacks & Queues
 
 It turns out that lists are very useful data structures. In fact, people use lists for all sorts of behaviors. Two behaviors are so common that we have given them their own names.
-
 We will discuss these behaviors again when we are implementing our own data structures but here we discuss these "archetypal" data structures.
 
 ## Queues (FIFO)
@@ -126,10 +120,9 @@ This section exists as a caveat in case you decide to google around for queue da
 
 Later in this course we will see so-called "Priority Queues" (typically implemented as a Heap), which allow you to maintain a queue with importances. For example, the queue to see a professor at office hours is likely to be maintained first by arrival time (FIFO) but students who need to go to another class may petition their classmates to cut in line. Therefore, some sense of urgency or importance is incorporated into the queue. 
 
-Even using a priority queue is slightly more difficult because you need to be able to sort the elements you put in; therefore, a priority queue is not quite a list[^comparable].
+Even using a priority queue is slightly more difficult because you need to be able to sort the elements you put in; therefore, a priority queue is not quite a list.
 
-<details>
-<summary>Priority Queues...</summary>
+### Aside: Comparable for PriorityQueue
 
 Another example of a Priority Queue in the real world is a hospital. To use Java's ``PriorityQueue<T>`` we need to implement an interface called ``Comparable<T>`` -- we haven't discussed interfaces in depth and we will return to ``Comparable`` later when we get to sorting.
 
@@ -154,9 +147,8 @@ public class Patient implements Comparable<Patient> {
     }
 }
 ```
-</details>
 
-### Priority and Concurrent or Threadsafe Queues
+### Concurrent or Threadsafe Queues
 
 In a more advanced programming class or an operating systems class, more subtleties are added to queue design: what happens if two requests come in at the same time? 
 

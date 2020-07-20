@@ -1,10 +1,4 @@
-+++
-title = "Java from Python"
-weight = 2
-[extra]
-math = true
-show_toc = true
-+++
+# Java from Python
 
 When students first come to Java from Python, they are usually a little overwhelmed. There's so much more to type to get anything done!
 
@@ -140,7 +134,7 @@ if (0.1 * 3 == 0.3) {
 }
 ```
 
-In all cases the way to correct this check is to use math expressions. Instead of comparing \\(x = y\\) directly, do something like this:
+In all cases the way to correct this check is to use math expressions. Instead of comparing \( x = y \) directly, do something like this:
 
 $$ |x-y| < \epsilon $$
 
@@ -168,12 +162,15 @@ System.out.println(Math.pow(2, 8)); // 256.0
 System.out.println(2 ^ 8); // 10
 ```
 
-<details>
+### Aside: What is an XOR?
+
+<details markdown=1>
 <summary>What's XOR?</summary>
 
 Both Python and Java agree: ``2 ^ 8 == 10`` and that's not what we expected from calculators and math class. But what is it?
 
 It turns out it is ***binary exclusive or*** or the XOR operator. To understand it's behavior we need to know our binary numbers:
+
 
 | Decimal Number | Binary Number |
 |----------------|---------------|
@@ -196,6 +193,7 @@ It turns out it is ***binary exclusive or*** or the XOR operator. To understand 
 | 16 | 10000 |
 | .. | .. |
 
+
 ```java
 // In binary:
 0b0010 ^ 0b1000 == 0b1010;
@@ -204,7 +202,10 @@ It turns out it is ***binary exclusive or*** or the XOR operator. To understand 
 ```
 
 XOR looks at each "bit" set and creates a result where the bits are set if either of the inputs have a 1 but not both. (either-OR, but not both is why we call it ***eXclusive OR***)
+
 </details>
+
+### java.lang.Math docs
 
 There are other methods on Java's ``Math`` class that you may find handy, much like Python's ``math``. A full list can be found as on the [java.lang.Math JavaDoc](https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html)
 
@@ -495,6 +496,7 @@ x--; // postfix
 --x; // prefix
 ```
 
+### Prefix vs. Postfix Aside
 There are some subtle differences between prefix and postfix, but you need not worry about them in the official work of this class.
 
 <details>

@@ -1,13 +1,6 @@
-+++
-title =  "List Methods"
-weight = 4
-[extra]
-show_toc = true
-+++
+# Using Java's Lists
 
-In the last section, we built up a graphical example that uses Java's ``List`` in order to dynamically add ``Fish`` as the user clicks, but to do so, we skipped over all the thing that a ``List`` can do.
-
-We are skimming this for a reason. Our goal is not to deeply study Java's implementations of things, but the concept of a List. That general concept is applicable outside of programming Java or any particular programming language. We say that a list is an ***Abstract Data Type*** -- it's something that's existed before computers and Java and will exist as a tool for problem solving regardless of what programming language or paradigm you will study in the future.
+This section will go over a few core methods of a list. Our goal is not to deeply study Java's implementations of things, but the concept of a List. That general concept is applicable outside of programming Java or any particular programming language. We say that a list is an ***Abstract Data Type*** -- it's something that's existed before computers and Java and will exist as a tool for problem solving regardless of what programming language or paradigm you will study in the future.
 
 The official documentation for Java's List is [available online](https://docs.oracle.com/javase/8/docs/api/java/util/List.html). If you don't have the link for a particular class, you can search for ``javadoc list`` online or access such pages from within your editor. If you code in Java, you will grow to rely on these documents for precise technical information.
 

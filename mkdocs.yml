@@ -9,17 +9,30 @@ edit_uri: "tree/master/src/"
 theme: 
     name: "readthedocs"
     custom_dir: "customize"
+markdown_extensions:
+    - extra
+    - md_in_html
+    - sane_lists
+    - tables
+    - nl2br
+    - mdx_math
 nav:
     - 'About': 'README.md'
-    - 'Array-Based Lists: FixedSizeList & GrowableList (aka ArrayList)': 'FSL.md'
+    - 'java-from-python.md'
+    - 'objects-101.md'
+    - 'list-methods.md'
+    - 'stacks-and-queues.md'
+    - 'complexity.md'
+    - 'Array-Based Lists': 'FSL.md'
     - 'Singly Linked-Lists': 'SLL.md'
     - 'Doubly Linked-Lists': 'DLL.md'
     - 'Chunky ArrayLists': 'ChunkyArrayList.md'
     - 'Lists Conclusions': 'Lists.md'
-    - 'Sorting (Part 1): Binary Search, IsSorted, BubbleSort': 'Sorting1.md'
-    - 'Sorting (Part 2): Insertion, Selection and Merge Sort': 'Sorting2.md'
+    - 'Sorting (1/2): Binary Search, IsSorted, BubbleSort': 'Sorting1.md'
+    - 'Sorting (2/2): Insertion, Selection and Merge Sort': 'Sorting2.md'
+    - 'Aside: Comparison': 'comparison.md'
     - 'Intro to Trees': 'Trees.md'
-    - 'Hashing, HashTables, HashSets, and HashMaps': 'HashTables.md'
+    - 'Hashing & HashTables': 'HashTables.md'
     - 'QuickSort': 'QuickSort.md'
     - 'Heaps & HeapSort': 'Heaps.md'
     - 'Balancing Tree Algorithms': 'Balancing.md'

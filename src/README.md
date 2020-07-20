@@ -1,6 +1,26 @@
-# Data Structures in Java for Smith College (Videos)
+# Data Structures in Java for Smith College
 
 This website currently begins a few weeks into the course I would usually teach, after finishing the pure-Java topics.
+
+## Java Notes
+
+This section contains a handful of notes useful for when you're "Getting started with Java".
+
+- [Java from Python](java-from-python.md)
+- [Objects & Classes](objects-101.md)
+- [Using Java's Lists](list-methods.md)
+
+## Data Structures Notes
+
+I consider stacks and queues to primarily be specific uses of lists -- rather than independent topics. Some of this is a trade-off for time in this course.
+
+- [Stacks & Queues](stacks-and-queues.md)
+
+## Big-O notation and complexity
+
+We use big-O notation to talk about the time-complexity (and very-occasionally the space-complexity) of data structures. These notes provide an intro.
+
+- [Complexity](complexity.md)
 
 ## Lists: Linked & Array
 
@@ -19,6 +39,7 @@ A sorted list can be considered a set data structure, so covering sorting also m
 - [Sorting (Part 1): Binary Search, IsSorted, BubbleSort](Sorting1.md)
 - [Sorting (Part 2): Insertion, Selection and Merge Sort](Sorting2.md)
 - [QuickSort](QuickSort.md)
+- [Comparison Notes](comparison.md) - these notes provide an aside about how to get Java to sort your own classes and objects.
 
 ## Trees
 

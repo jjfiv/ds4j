@@ -1,9 +1,4 @@
-+++
-title =  "Comparison"
-weight = 6
-[extra]
-show_toc = true
-+++
+# Comparison in Java
 
 We sort and compare items as humans because it helps us find things faster. 
 
@@ -33,7 +28,7 @@ public class Book {
 }
 ```
 
-## Print these books
+### Print these books
 
 To move along our example, we'll need to be able to print an object of the ``Book`` class, so we'll override Java's ``toString()`` method.
 
@@ -52,9 +47,9 @@ Now if we wrap up our ``main`` method with a ``System.out.println(books);``, we'
 [**Pride and Prejudice** by Austen, Jane (1813), **Emma** by Austen, Jane (1815), **Frankenstein** by Shelley, Mary (1818)]
 ``
 
-## Sort these books
+### Sort these books
 
-If I ask you to sort these books, perhaps you do so by author, or by title, or by publicationYear. All the fields of this class are sortable. Maybe you ask me a follow-up question to determine how I want them sorted.
+If I ask you to sort these books, perhaps you do so by ``author``, or by ``title``, or by ``publicationYear``. All the fields of this class are sortable. Maybe you ask me a follow-up question to determine how I want them sorted.
 
 In fact, that's exactly what Java does. If we add a sort statement before printing, it tells us it doesn't know how we want to ``compare`` book objects.
 
@@ -83,9 +78,9 @@ Comparison.java:30: error: no suitable method found for sort(List<Book>)
 
 Basically, this boils down to needing a ``Comparator<T>`` or a ``Comparable<T>``. But what are those?
 
-# Java classes for Sorting
+## Java classes for Sorting
 
-## What is a ``Comparable<T>``?
+### What is a ``Comparable<T>``?
 
 ``Comparable`` is a Java ***interface*** which can be implemented on a class to define the default order of a class. Maybe you have a ``User`` class in your application, and you always want to sort them by their ``String username``.
 
@@ -116,7 +111,7 @@ List<User> users = //...
 Collections.sort(listOfUsers);
 ```
 
-## What is a ``Comparator<T>``?
+### What is a ``Comparator<T>``?
 
 Sometimes there is not an obvious default order for a class. Let's go back to our book example.
 
@@ -182,7 +177,7 @@ System.out.println(books);
 But we have to know that we're defining a ``Comparator`` and it's method takes two arguments. Nicely enough, Java will figure out the rest.
 
 
-## Comparable vs. Comparator
+### Comparable vs. Comparator
 
 TL;DR: Here's a table comparing them:
 
@@ -191,7 +186,7 @@ TL;DR: Here's a table comparing them:
 | ``int compare(T left, T right)`` | ``left`` | ``right`` | Comparators take in two arguments. |
 | ``int compare(T other)`` | ``this``| ``other`` | Comparables take in one argument and compare to themselves. |
 
-## Why do ``compare`` methods return an ``int``?
+### Why do ``compare`` methods return an ``int``?
 
 Compare methods are a replacement for ``<``, ``>``, and ``==`` for your new class, and therefore have three possible outputs.
 
@@ -203,11 +198,11 @@ Compare methods are a replacement for ``<``, ``>``, and ``==`` for your new clas
 
 If you think about integer subtraction, ``int compare(int a, int b) { return a - b; }`` performs appropriately, returning numbers that are interpretable as all three comparisons!
 
-### Sorting in the other direction:
+#### Sorting in the other direction:
 
 Because it's an integer, we can also sort in the opposite direction, descending (a.ka., Z to A, biggest to smallest, etc.) by writing a ``Comparator`` or ``Comparable`` that takes the negative of an existing one. We also have access to ``Collections.reverse(list)``.
 
-## Why is comparing Strings fairly slow?
+### Why is comparing Strings fairly slow?
 
 When you have other types, you tend to be fancier. For instance, here's a sketch of how to compare two strings:
 
@@ -239,7 +234,7 @@ class StrCmp implements Comparator<String> {
 Never use this code; trust that ``java.lang.String`` is a ``Comparable`` already and just call ``left.compareTo(right);`` as we've been doing earlier.
 
 
-# Sorting IRL: How do I compare...?
+## Sorting IRL: How do I compare...?
 
 | Class/Type | Method |
 |---|---|

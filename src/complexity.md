@@ -1,10 +1,4 @@
-+++
-title = "Complexity"
-weight = 5
-[extra]
-show_toc = true
-math = true
-+++
+# Complexity
 
 Before we get too far into the data structures section of our course, we need a new tool: we need a formal way of comparing the efficiency of different pieces of code. 
 
@@ -151,7 +145,7 @@ Woah. That's a lot of work. There are two other semicolons in the original metho
 
 In this instance, no matter what value \\( n \\) takes, we should always prefer ``sumSequence2``. But this gives us a hint for comparisons that really matter: ``sumSequence1`` is dramatically worse than ``sumSequence2`` (from a complexity point-of-view) because it depends on \\( n \\), the input itself. ``sumSequence3`` is worse than ``sumSequence2``, but not significantly, when \\(n\\) is large.
 
-## Big-O notation: What's significant mean?
+## Big-O notation: What does significant mean?
 
 The ***time complexity*** of a method or procedure is always defined in terms of the ***size of its input***, which is notated as \\(n\\). And it is always a function, e.g., \\(f(n) = 3n + 2\\) or \\(f(n) = n^3 + n\\).
 
@@ -208,4 +202,4 @@ Big-O notation can refer to worst-case, best-case, or average-case complexity. I
 
 ## Conclusion
 
-Theoretical Complexity is often a class and is still an a research area. We have described complexity as "like counting semicolons" along with Big-O notation to provide a general tool to discuss complexity.
+Theoretical Complexity is a broad topic and is still an open a research area. We have described complexity as being "like counting semicolons" along with Big-O notation to provide a general tool to discuss which functions or methods are most efficient, but we have done so quite informally here.

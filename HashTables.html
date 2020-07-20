@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="John Foley <johnf@middlebury.edu>">
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Hashing, HashTables, HashSets, and HashMaps - Data Structures in Java</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Hashing, HashTables, HashSets, and HashMaps";
+    var mkdocs_page_input_path = "HashTables.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> Data Structures in Java</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="index.html">About</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="FSL.html">Array-Based Lists: FixedSizeList & GrowableList (aka ArrayList)</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="SLL.html">Singly Linked-Lists</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="DLL.html">Doubly Linked-Lists</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="ChunkyArrayList.html">Chunky ArrayLists</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Lists.html">Lists Conclusions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Sorting1.html">Sorting (Part 1): Binary Search, IsSorted, BubbleSort</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Sorting2.html">Sorting (Part 2): Insertion, Selection and Merge Sort</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Trees.html">Intro to Trees</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="HashTables.html">Hashing, HashTables, HashSets, and HashMaps</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-a-hash-function-511">What is a hash function? (5:11)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hash-functions-in-securityprivacy-222">Hash Functions in Security/Privacy (2:22)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hash-functions-for-hashmaps-328">Hash Functions for HashMaps (3:28)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hashset-example-430">HashSet Example (4:30)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hashmap-example-111">HashMap Example (1:11)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hashmap-internals-collisions-and-load-factor-550">HashMap Internals: Collisions and Load Factor (5:50)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hashset-with-fewer-buckets-143">HashSet with Fewer Buckets (1:43)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hashmap-collision-resolution-strategies-221">HashMap Collision Resolution Strategies (2:21)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hashset-with-linear-probing-example-456">HashSet with Linear Probing Example (4:56)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hashmap-internals-example-bucket-classes-106">HashMap Internals: Example Bucket Classes (1:06)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#insertion-order-linkedhashmap-and-linkedhashset-115">Insertion Order: LinkedHashMap and LinkedHashSet (1:15)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hashmaps-are-the-best-dictionary-complexity-325">HashMaps are the best Dictionary (Complexity) (3:25)</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="QuickSort.html">QuickSort</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Heaps.html">Heaps & HeapSort</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Balancing.html">Balancing Tree Algorithms</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Graphs.html">Intro to Graphs & Graph Algorithms</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">Data Structures in Java</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Hashing, HashTables, HashSets, and HashMaps</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/jjfiv/ds4j/tree/master/src/HashTables.md"
+          class="icon icon-github"> Edit on Github</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="hashing-hashtables-hashsets-and-hashmaps">Hashing, HashTables, HashSets, and HashMaps</h1>
+<h2 id="what-is-a-hash-function-511">What is a hash function? (5:11)</h2>
+<p><iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/nU_MWM4sLWI?rel=0" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe></p>
+<h2 id="hash-functions-in-securityprivacy-222">Hash Functions in Security/Privacy (2:22)</h2>
+<p><iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/frH-0p_OO2M?rel=0" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe></p>
+<h2 id="hash-functions-for-hashmaps-328">Hash Functions for HashMaps (3:28)</h2>
+<p><iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/S7yNwsuVX3o?rel=0" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe></p>
+<h2 id="hashset-example-430">HashSet<Integer> Example (4:30)</h2>
+<p><iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/ilzouUrGKHA?rel=0" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe></p>
+<h2 id="hashmap-example-111">HashMap<Integer, Character> Example (1:11)</h2>
+<p><iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/1gmqMUqnPzw?rel=0" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe></p>
+<h2 id="hashmap-internals-collisions-and-load-factor-550">HashMap Internals: Collisions and Load Factor (5:50)</h2>
+<p><iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/xrSIfMCQOxk?rel=0" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe></p>
+<h2 id="hashset-with-fewer-buckets-143">HashSet with Fewer Buckets (1:43)</h2>
+<p><iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/yji-YLIybQY?rel=0" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe></p>
+<h2 id="hashmap-collision-resolution-strategies-221">HashMap Collision Resolution Strategies (2:21)</h2>
+<p><iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/ecp8L6CGZFU?rel=0" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe></p>
+<h2 id="hashset-with-linear-probing-example-456">HashSet with Linear Probing Example (4:56)</h2>
+<p><iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/h1u_NbweJnY?rel=0" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe></p>
+<h2 id="hashmap-internals-example-bucket-classes-106">HashMap Internals: Example Bucket Classes (1:06)</h2>
+<p><iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/pXxyZjE_8hM?rel=0" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe></p>
+<h2 id="insertion-order-linkedhashmap-and-linkedhashset-115">Insertion Order: LinkedHashMap and LinkedHashSet (1:15)</h2>
+<p><iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/-T_XmV0eaM8?rel=0" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe></p>
+<h2 id="hashmaps-are-the-best-dictionary-complexity-325">HashMaps are the best Dictionary (Complexity) (3:25)</h2>
+<p><iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/ebx7WN9UeG4?rel=0" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe></p>
+              
+            </div>
+          </div>
+          <footer>
+    
+      <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        
+          <a href="QuickSort.html" class="btn btn-neutral float-right" title="QuickSort">Next <span class="icon icon-circle-arrow-right"></span></a>
+        
+        
+          <a href="Trees.html" class="btn btn-neutral" title="Intro to Trees"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        
+      </div>
+    
+  
+    <hr/>
+  
+    <div style="text-align: center;" role="contentinfo">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </div>
+  
+    Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  </footer>
+  
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="Trees.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="QuickSort.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

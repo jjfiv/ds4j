@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="John Foley <johnf@middlebury.edu>">
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Heaps & HeapSort - Data Structures in Java</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Heaps & HeapSort";
+    var mkdocs_page_input_path = "Heaps.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> Data Structures in Java</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="index.html">About</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="FSL.html">Array-Based Lists: FixedSizeList & GrowableList (aka ArrayList)</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="SLL.html">Singly Linked-Lists</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="DLL.html">Doubly Linked-Lists</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="ChunkyArrayList.html">Chunky ArrayLists</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Lists.html">Lists Conclusions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Sorting1.html">Sorting (Part 1): Binary Search, IsSorted, BubbleSort</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Sorting2.html">Sorting (Part 2): Insertion, Selection and Merge Sort</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Trees.html">Intro to Trees</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="HashTables.html">Hashing, HashTables, HashSets, and HashMaps</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="QuickSort.html">QuickSort</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="Heaps.html">Heaps & HeapSort</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#heaps-vs-binary-search-trees-336">Heaps vs. Binary Search Trees (3:36)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#min-heaps-and-max-heaps-140">Min-heaps and Max-heaps (1:40)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#heaps-are-stored-in-arraylists-305">Heaps are stored in ArrayLists (3:05)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#heap-insert-159">Heap Insert (1:59)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#heap-sift-up-code-210">Heap Sift-Up Code (2:10)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#heap-remove-sift-down-ex-1-118">Heap Remove (Sift-Down) Ex. 1 (1:18)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#heap-remove-siftdown-ex-2-118">Heap Remove (SiftDown) Ex. 2 (1:18)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#heap-sift-down-code-335">Heap Sift-Down Code (3:35)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#heapsort-430">HeapSort (4:30)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#priorityqueue-complexity-213">PriorityQueue Complexity (2:13)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#heap-applications-priority-queue-415">Heap Applications: Priority Queue (4:15)</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Balancing.html">Balancing Tree Algorithms</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Graphs.html">Intro to Graphs & Graph Algorithms</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">Data Structures in Java</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Heaps & HeapSort</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/jjfiv/ds4j/tree/master/src/Heaps.md"
+          class="icon icon-github"> Edit on Github</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="heaps-heapsort">Heaps &amp; HeapSort</h1>
+<h2 id="heaps-vs-binary-search-trees-336">Heaps vs. Binary Search Trees (3:36)</h2>
+<p><iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/TY_Ti3bdxV0?rel=0" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe></p>
+<h2 id="min-heaps-and-max-heaps-140">Min-heaps and Max-heaps (1:40)</h2>
+<p><iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/gofY-OgiDVg?rel=0" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe></p>
+<h2 id="heaps-are-stored-in-arraylists-305">Heaps are stored in ArrayLists (3:05)</h2>
+<p><iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/tAJprAOKx3s?rel=0" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe></p>
+<h2 id="heap-insert-159">Heap Insert (1:59)</h2>
+<p><iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/HClrHfSnCu0?rel=0" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe></p>
+<h2 id="heap-sift-up-code-210">Heap Sift-Up Code (2:10)</h2>
+<p><iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/DIZFvQKQBNg?rel=0" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe></p>
+<h2 id="heap-remove-sift-down-ex-1-118">Heap Remove (Sift-Down) Ex. 1 (1:18)</h2>
+<p><iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/3DJpeI1NUNs?rel=0" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe></p>
+<h2 id="heap-remove-siftdown-ex-2-118">Heap Remove (SiftDown) Ex. 2 (1:18)</h2>
+<p><iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/UOiwLF-pB30?rel=0" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe></p>
+<h2 id="heap-sift-down-code-335">Heap Sift-Down Code (3:35)</h2>
+<p><iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/mt74GFKzR6c?rel=0" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe></p>
+<h2 id="heapsort-430">HeapSort (4:30)</h2>
+<p><iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/gQ9ebl-kyQc?rel=0" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe></p>
+<h2 id="priorityqueue-complexity-213">PriorityQueue Complexity (2:13)</h2>
+<p><iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/YPmulVicDr0?rel=0" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe></p>
+<h2 id="heap-applications-priority-queue-415">Heap Applications: Priority Queue (4:15)</h2>
+<p><iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/INojs4zKuw4?rel=0" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe></p>
+              
+            </div>
+          </div>
+          <footer>
+    
+      <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        
+          <a href="Balancing.html" class="btn btn-neutral float-right" title="Balancing Tree Algorithms">Next <span class="icon icon-circle-arrow-right"></span></a>
+        
+        
+          <a href="QuickSort.html" class="btn btn-neutral" title="QuickSort"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        
+      </div>
+    
+  
+    <hr/>
+  
+    <div style="text-align: center;" role="contentinfo">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </div>
+  
+    Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  </footer>
+  
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="QuickSort.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="Balancing.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

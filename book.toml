@@ -1,0 +1,6 @@
+[book]
+authors = ["John Foley"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Data Structures in Java"

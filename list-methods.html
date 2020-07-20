@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="John Foley <johnf@middlebury.edu>">
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>📖 Using Lists - Data Structures in Java</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\ud83d\udcd6 Using Lists";
+    var mkdocs_page_input_path = "list-methods.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+<script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+    <script type="text/x-mathjax-config;executed=true">
+        MathJax.Hub.Config({
+            config: ["Accessible.js", "Safe.js"],
+            errorSettings: { message: ["!"] },
+            skipStartupTypeset: true,
+            messageStyle: "none"
+        });
+    </script>
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> Data Structures in Java</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="index.html">📖 About</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="java-from-python.html">📖 Java from Python</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="objects-101.html">📖 Classes & Objects</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="list-methods.html">📖 Using Lists</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#whats-an-anything-or-a-t">What's an Anything or a T?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#core-methods-to-know">Core Methods to Know</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#int-size">int size()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#boolean-addt-item">boolean add(T item)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#t-getint-index">T get(int index)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#boolean-addint-index-t-item">boolean add(int index, T item)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#t-removeint-index">T remove(int index)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#copying-a-list">Copying a list</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#some-additional-helpful-methods">Some Additional Helpful Methods</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#boolean-containsobject-item">boolean contains(Object item)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#int-indexoft-item">int indexOf(T item)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#boolean-removet-item">boolean remove(T item)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#non-member-methods">Non-Member Methods</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#collectionssortlist-modify">Collections.sort(List modify)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#collectionsreverselist-modify">Collections.reverse(List modify)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#collectionsshufflelist-modify">Collections.shuffle(List modify)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#some-differences-from-python">Some Differences from Python</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#summary-of-methods">Summary of Methods</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#challenges">Challenges</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="stacks-and-queues.html">📖 Stacks & Queues</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="complexity.html">📖 Complexity</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="FSL.html">📺 Array-Based Lists</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="SLL.html">📺 Singly Linked-Lists</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="DLL.html">📺 Doubly Linked-Lists</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="ChunkyArrayList.html">📺 Chunky ArrayLists</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Lists.html">📺 Lists Conclusions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Sorting1.html">📺 Sorting (1/2): Binary Search, IsSorted, BubbleSort</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Sorting2.html">📺 Sorting (2/2): Insertion, Selection and Merge Sort</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="comparison.html">📖Aside: Comparison</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Trees.html">📺 Intro to Trees</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="HashTables.html">📺 Hashing & HashTables</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="QuickSort.html">📺 QuickSort</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Heaps.html">📺 Heaps & HeapSort</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Balancing.html">📺 Balancing Tree Algorithms</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Graphs.html">📺 Intro to Graphs & Graph Algorithms</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">Data Structures in Java</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>📖 Using Lists</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/jjfiv/ds4j/tree/master/src/list-methods.md"
+          class="icon icon-github"> Edit on Github</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="using-javas-lists">Using Java's Lists</h1>
+<p>This section will go over a few core methods of a list. Our goal is not to deeply study Java's implementations of things, but the concept of a List. That general concept is applicable outside of programming Java or any particular programming language. We say that a list is an <strong><em>Abstract Data Type</em></strong> -- it's something that's existed before computers and Java and will exist as a tool for problem solving regardless of what programming language or paradigm you will study in the future.</p>
+<p>The official documentation for Java's List is <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html">available online</a>. If you don't have the link for a particular class, you can search for <code>javadoc list</code> online or access such pages from within your editor. If you code in Java, you will grow to rely on these documents for precise technical information.</p>
+<p>Java's <code>List</code> provides a lot of functionality; not only is there an <code>add</code> method that takes a single item, but an <code>addAll</code> method that takes another <code>List</code>. We can already write a simplified version of Java's <code>addAll</code> method, for any list type. </p>
+<pre><code class="java">// for a List&lt;Anything&gt; or List&lt;T&gt;:
+public void addAll(List&lt;Anything&gt; items) {
+    for (Anything item : items) {
+        this.add(item);
+    }
+}
+</code></pre>
+
+<p>So beyond Java's definition of what makes a class a <code>List&lt;T&gt;</code> which involves numerous other methods, there are a few operations that really define a what an abstract <code>List</code> can do, and you'll find them in any language with lists.</p>
+<h2 id="whats-an-anything-or-a-t">What's an Anything or a T?</h2>
+<p>When we refer to the <code>List</code> abstract data type, particularly in java, we sometimes refer to it as a <code>List&lt;T&gt;</code>. This means that it might be a <code>List&lt;Fish&gt;</code> a <code>List&lt;String&gt;</code> or any other particular class.</p>
+<h2 id="core-methods-to-know">Core Methods to Know</h2>
+<p>Adding, viewing, and removing items are core to what a list is, but the most important thing a list does is maintain a sequence of items in the order you put them in.</p>
+<h3 id="int-size">int size()</h3>
+<p>To ask how many items are in a list, we can call the size method.</p>
+<pre><code class="java">List&lt;String&gt; abc = new ArrayList&lt;&gt;();
+System.out.println(abc.size()); // prints: 0
+abc.add(&quot;A&quot;);
+System.out.println(abc.size()); // prints: 1
+abc.add(&quot;B&quot;);
+System.out.println(abc.size()); // prints: 2
+abc.add(&quot;C&quot;);
+System.out.println(abc.size()); // prints: 3
+</code></pre>
+
+<p>We have already seen that <code>size</code> is useful in loops.</p>
+<h3 id="boolean-addt-item">boolean add(T item)</h3>
+<p>A list isn't much use to us unless we can add things to it. Notice how we can't really use <code>add</code> without causing <code>size</code> to change. These two methods will always be related!</p>
+<pre><code class="java">List&lt;String&gt; abc = new ArrayList&lt;&gt;();
+System.out.println(abc); // prints: []
+abc.add(&quot;A&quot;);
+System.out.println(abc); // prints: [A]
+abc.add(&quot;B&quot;);
+System.out.println(abc); // prints: [A,B]
+abc.add(&quot;C&quot;);
+System.out.println(abc); // prints: [A,B,C]
+</code></pre>
+
+<p>This method is configured to return a <code>boolean</code> -- that is, when you call <code>add</code> in Java a data structure has the opportunity to tell you it wasn't possible, and return <code>false</code>. This is meaningful when we get to discussing <code>Set</code> datastructures.</p>
+<h3 id="t-getint-index">T get(int index)</h3>
+<p>Java, like Python and many other languages, indexes lists starting at zero and going up to the length of that list (not inclusively).</p>
+<pre><code class="java">List&lt;String&gt; abc = new ArrayList&lt;&gt;();
+abc.add(&quot;A&quot;);
+abc.add(&quot;B&quot;);
+abc.add(&quot;C&quot;);
+System.out.println(abc.get(0)); // prints: A
+System.out.println(abc.get(1)); // prints: B
+System.out.println(abc.get(2)); // prints: C
+System.out.println(abc.get(3)); // crashes!
+System.out.println(abc.get(-1)); // crashes!
+</code></pre>
+
+<p>When you go off the end of a <code>List</code> or an array in Java, an error will be thrown. You will see something like the following:</p>
+<pre><code>java.lang.IndexOutOfBoundsException thrown: Index 3 out-of-bounds for length 3
+       at Preconditions.outOfBounds (Preconditions.java:64)
+       at Preconditions.outOfBoundsCheckIndex (Preconditions.java:70)
+       at Preconditions.checkIndex (Preconditions.java:248)
+       at Objects.checkIndex (Objects.java:372)
+       at ArrayList.get (ArrayList.java:440)
+       at JavaListExperiments.main (JavaListExperiments.java:25)
+</code></pre>
+
+<p>Note that it tells you that ArrayList.get was the problem in a class called <code>JavaListExperiments</code> and that index 3 was out-of-bounds for length 3. When you get an error like this, look for class names you recognize (we won't be discussing <code>Objects</code> or <code>Preconditions</code> in this book), so <code>ArrayList</code> and <code>JavaListExperiments</code> are most relevant to our code, and then also read the message that it gives you. Thanks to this error, we know exactly what line caused our problem (it was line 25 for me!).</p>
+<h3 id="boolean-addint-index-t-item">boolean add(int index, T item)</h3>
+<p>There is another method named <code>add</code> on Java's list class, which supports adding an item to a particular position.</p>
+<pre><code class="java">// Set up our ABC list.
+List&lt;String&gt; abc = new ArrayList&lt;&gt;();
+abc.add(&quot;A&quot;);
+abc.add(&quot;B&quot;); 
+abc.add(&quot;C&quot;);
+System.out.println(abc); // prints: [A,B,C]
+
+// Now start inserting in the middle.
+abc.add(1, &quot;Z&quot;);
+System.out.println(abc); // prints: [A,Z,B,C]
+abc.add(0, &quot;Y&quot;);
+System.out.println(abc); // prints: [Y,A,Z,B,C]
+abc.add(abc.size()-1, &quot;X&quot;);
+System.out.println(abc); // prints: [Y,A,Z,B,X,C]
+</code></pre>
+
+<p>Once again, this version of <code>add</code> also returns a <code>boolean</code>, but it will always return <code>true</code>.</p>
+<h3 id="t-removeint-index">T remove(int index)</h3>
+<p>Removing an item by its index is made possible by the <code>remove</code> method. It takes an <code>int</code> referring to the index to delete, and returns the value that was there, while modifying the list.</p>
+<pre><code class="java">// Set up our ABC list.
+List&lt;String&gt; abc = new ArrayList&lt;&gt;();
+abc.add(&quot;A&quot;);
+abc.add(&quot;B&quot;); 
+abc.add(&quot;C&quot;);
+System.out.println(abc); // prints: [A,B,C]
+
+// Remove B.
+System.out.println(abc.remove(1)); // prints: B
+// Remove C.
+System.out.println(abc.remove(1)); // prints: C
+// Remove A.
+System.out.println(abc.remove(0)); // prints: A
+</code></pre>
+
+<p class="Think">
+Why does calling <code>remove(1)</code> return different <code>String</code>s each time we call it?
+</p>
+
+<h3 id="copying-a-list">Copying a list</h3>
+<p>The two list classes, <code>ArrayList</code> and <code>LinkedList</code> -- as well as most other data structures Java gives you access to, can make a copy of another list using a special constructor.</p>
+<pre><code class="java">List&lt;String&gt; abc = new ArrayList&lt;&gt;();
+abc.add(&quot;A&quot;);
+abc.add(&quot;B&quot;);
+abc.add(&quot;C&quot;);
+// Copy abc.
+List&lt;String&gt; copy = new ArrayList&lt;&gt;(abc);
+// Delete all elements from ABC.
+abc.clear();
+System.out.println(abc); // prints: []
+System.out.println(copy); // prints: [A, B, C]
+</code></pre>
+
+<h2 id="some-additional-helpful-methods">Some Additional Helpful Methods</h2>
+<p>The following methods are available on Java's List and you'll want to use them from time to time. However, they can all be built out of the methods we already have.</p>
+<h3 id="boolean-containsobject-item">boolean contains(Object item)</h3>
+<p>We can quickly check if a value is in a <code>List</code> using the contains method.</p>
+<pre><code class="java">List&lt;String&gt; ingredients = new ArrayList&lt;&gt;();
+ingredients.add(&quot;Milk&quot;);
+ingredients.add(&quot;Eggs&quot;); 
+ingredients.add(&quot;Flour&quot;);
+
+if (ingredients.contains(&quot;Flour&quot;)) {
+    System.out.println(&quot;We have flour!&quot;);
+}
+if (!ingredients.contains(&quot;Cheese&quot;)) {
+    System.out.println(&quot;We need cheese!&quot;);
+}
+</code></pre>
+
+<p>We can imagine that this method is implemented as follows, given a list <code>lookThrough</code> and the item we're looking for <code>findMe</code>.</p>
+<pre><code class="java">public static boolean listContains(List&lt;T&gt; lookThrough, T findMe) {
+    for (T actual : lookThrough) {
+        if (findMe.equals(actual)) {
+            return true;
+        }
+    }
+    return false;
+}
+</code></pre>
+
+<p>Notice that we get to <code>return true</code> immediately, as soon as we find a match, but in the worst case, we check every item in the list, and then <code>return false</code> because we don't find it. This method will work because a <code>return</code> statement immediately exits the method.</p>
+<p>Note as well that we use the <code>.equals</code> operation to compare our two items. Remember that in Java that <code>==</code> only works on primitives: <code>boolean</code>, <code>int</code>, etc. and asks whether two objects are the exact same object for any class type.</p>
+<p class="Question">
+Why does this method take an <code>Object</code> but all the others take a <code>T</code>?
+</p>
+
+<p class="Answer">
+This method is ancient! The earliest versions of Java did not have the ability to write <code>List&lt;T></code> but you could use <code>List</code> which functions as a <code>List&lt;Object></code>. Original methods, like this <code>contains</code> therefore asked for <code>Object</code>-type variables. They could not change it to <code>T</code> when they invented it (later) because it would break all the Java code already written to use it, and so it remains.
+</p>
+
+<p>Beware of type mismatches on <code>contains</code> because of this history:</p>
+<pre><code class="java">List&lt;String&gt; ingredients = new ArrayList&lt;&gt;();
+ingredients.add(&quot;Milk&quot;);
+ingredients.add(&quot;Eggs&quot;); 
+ingredients.add(&quot;Flour&quot;);
+
+if (ingredients.contains(7)) {
+    System.out.println(&quot;There will never be numbers in ingredients!&quot;);
+}
+</code></pre>
+
+<p>We would expect Java to warn us about asking for <code>7</code> in the <code>ingredients</code> list, because <code>7</code> is not a <code>String</code> and <code>ingredients</code> is a <code>List&lt;String&gt;</code>: therefore it will always return <code>false</code>, but it can't because the <code>contains</code> method is defined to take an <code>Object</code> and will therefore accept anything!</p>
+<h3 id="int-indexoft-item">int indexOf(T item)</h3>
+<p>This method helps us find an item in our list. If it is in the list at all, we return the first position of that item. If we cannot find it, we get back <code>-1</code>.</p>
+<pre><code class="java">List&lt;String&gt; ingredients = new ArrayList&lt;&gt;();
+ingredients.add(&quot;Milk&quot;);
+ingredients.add(&quot;Eggs&quot;); 
+ingredients.add(&quot;Flour&quot;);
+ingredients.add(&quot;Eggs&quot;); 
+
+System.out.println(ingredients.indexOf(&quot;Milk&quot;)); // prints: 0
+System.out.println(ingredients.indexOf(&quot;Eggs&quot;)); // prints: 1
+System.out.println(ingredients.indexOf(&quot;Bacon&quot;)); // prints: -1
+</code></pre>
+
+<p>Again, we can write a version of this method given the ones we already know. It looks a lot like <code>listContains</code>!</p>
+<pre><code class="java">public static boolean listFindIndex(List&lt;T&gt; lookThrough, T findMe) {
+    for (int index=0; index&lt;lookThrough.size(); index++) {
+        if (findMe.equals(actual)) {
+            return index;
+        }
+    }
+    return -1;
+}
+</code></pre>
+
+<p>Note that we had to change which style of for-loop we used in order to write this method.</p>
+<h3 id="boolean-removet-item">boolean remove(T item)</h3>
+<p>We can also remove items by value; that is: we search through the list, and if we find the item, we remove it. This time, we implement it using <code>indexOf</code> and the other <code>remove</code>.</p>
+<pre><code class="java">boolean listRemoveByItem(List&lt;T&gt; lookThrough, T removeMe) {
+    int index = lookThrough.indexOf(removeMe);
+    if (index &gt;= 0) {
+        return lookThrough.remove(index);
+    }
+    return false;
+}
+</code></pre>
+
+<p class="Challenge">
+Write and test this method without using <code>indexOf</code>.
+</p>
+
+<h2 id="non-member-methods">Non-Member Methods</h2>
+<p>Not all list functionality that comes with Java lives on the <code>List</code> class. A lot of the static methods on <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Collections.html"><code>java.util.Collections</code></a> may be very useful. Here are some of the most useful.</p>
+<h3 id="collectionssortlist-modify">Collections.sort(List<T> modify)</h3>
+<p>Although we will discuss sorting later in more detail, sorting is an incredibly useful tool for solving problems. Most of the time we want to use Java's sorting algorithm to do that work for us, unless we have a special case where we need to write it ourselves.</p>
+<pre><code class="java">// Set up our ABC list, but backwards.
+List&lt;String&gt; cba = new ArrayList&lt;&gt;();
+cba.add(&quot;C&quot;);
+cba.add(&quot;B&quot;); 
+cba.add(&quot;A&quot;);
+System.out.println(cba); // prints: [C,B,A]
+
+// Sort it!
+Collections.sort(cba);
+System.out.println(cba); // prints: [A,B,C]
+</code></pre>
+
+<p>This method, like all others, modifies a list in place, so we might need to make a copy of a list first, if we want it both sorted and not-sorted.</p>
+<h3 id="collectionsreverselist-modify">Collections.reverse(List<T> modify)</h3>
+<p>We can also reverse a list, no matter what it is.</p>
+<pre><code class="java">List&lt;String&gt; racer = new ArrayList&lt;&gt;();
+racer.add(&quot;R&quot;);
+racer.add(&quot;A&quot;); 
+racer.add(&quot;C&quot;);
+racer.add(&quot;E&quot;);
+racer.add(&quot;R&quot;);
+System.out.println(racer); // prints: [R,A,C,E,R]
+Collections.reverse(racer);
+System.out.println(racer); // prints: [R,E,C,A,R]
+</code></pre>
+
+<p class="Think">
+Why would the word "Racecar" be a bad choice for testing the above code?
+</p>
+
+<h3 id="collectionsshufflelist-modify">Collections.shuffle(List<T> modify)</h3>
+<p>You can also shuffle a list in Java. Try the following example a few times to see what it prints. The output should change each time you run it.</p>
+<pre><code class="java">// Set up our ABC list, but backwards.
+List&lt;String&gt; abc = new ArrayList&lt;&gt;();
+abc.add(&quot;A&quot;); abc.add(&quot;B&quot;); 
+abc.add(&quot;C&quot;); abc.add(&quot;D&quot;);
+abc.add(&quot;E&quot;); abc.add(&quot;F&quot;);
+System.out.println(abc); // prints: [A,B,C,D,E,F]
+
+Collections.shuffle(abc);
+System.out.println(abc); // Try this a few times!
+</code></pre>
+
+<p>If you're interested in how shuffling works, check out the <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates Shuffle</a>. One approach to this problem is to assign random numbers to every entry in your list, and sort it. The "Fisher-Yates Shuffle" is more efficient.</p>
+<h2 id="some-differences-from-python">Some Differences from Python</h2>
+<p>Python's list is a built-in data type that provides some of the same abstract operations, under different names. If you previously studied python, it may be interesting or helpful for you to review some of the differences.</p>
+<p>In python, <code>size()</code> was available as a special operation: <code>len</code>, not a method.</p>
+<pre><code class="python">abc = [&quot;A&quot;,&quot;B&quot;,&quot;C&quot;]
+print(len(abc)) # prints: 3
+</code></pre>
+
+<p>In python, <code>add</code> is called <code>append</code>. Adding at a particular index was called <code>insert</code>. </p>
+<pre><code class="python">abc = []
+abc.append(&quot;A&quot;)
+abc.append(&quot;B&quot;)
+abc.append(&quot;C&quot;)
+print(abc) # prints: [A,B,C]
+</code></pre>
+
+<p>There is no <code>get</code> method, just square brackets. Python also supported negative indices, but in Java you must use size to get the last element.</p>
+<pre><code class="python">print(abc[0]) # prints: A
+print(abc[1]) # prints: B
+print(abc[-1]) # prints: C
+
+# negative indexing is a short-hand for using the size
+print(abc[len(abc)-1]) # prints: C
+</code></pre>
+
+<pre><code class="java">// Equivalent to Python's abc[-1]:
+System.out.println(abc.get(abc.size()-1));
+</code></pre>
+
+<h2 id="summary-of-methods">Summary of Methods</h2>
+<table>
+<thead>
+<tr>
+<th>Java Method</th>
+<th>Java Usage</th>
+<th>Closest Python</th>
+<th>Java Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int size()</code></td>
+<td><code>xs.size()</code></td>
+<td><code>len(xs)</code></td>
+<td>returns the number of items</td>
+</tr>
+<tr>
+<td><code>boolean add(T)</code></td>
+<td><code>xs.add(x)</code></td>
+<td><code>xs.append(x)</code></td>
+<td>adds an item to the back of the list</td>
+</tr>
+<tr>
+<td><code>T get(int)</code></td>
+<td><code>xs.get(i)</code></td>
+<td><code>xs[i]</code></td>
+<td>get an item at the index</td>
+</tr>
+<tr>
+<td><code>boolean add(int, T)</code></td>
+<td><code>xs.add(i, x)</code></td>
+<td><code>xs.insert(i, x)</code></td>
+<td>inserts an item before the index</td>
+</tr>
+<tr>
+<td><code>boolean contains(T)</code></td>
+<td><code>xs.contains(x)</code></td>
+<td><code>x in xs</code></td>
+<td>returns true if the list has the item.</td>
+</tr>
+<tr>
+<td><code>int indexOf(T)</code></td>
+<td><code>xs.indexOf(x)</code></td>
+<td><code>xs.index(x)</code></td>
+<td>returns the position of the item, or -1 if not found.</td>
+</tr>
+<tr>
+<td><code>boolean remove(T)</code></td>
+<td><code>xs.remove(x)</code></td>
+<td><code>xs.remove(x)</code></td>
+<td>returns true if the item was found and deleted.</td>
+</tr>
+<tr>
+<td><code>T remove(int)</code></td>
+<td><code>xs.remove(i)</code></td>
+<td><code>del xs[index]</code></td>
+<td>returns the item at the given position and removes it.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges">Challenges</h2>
+<h3 class="Challenge">Pick a Random Letter</h3>
+
+<p>Using a list of all the letters in the dictionary, e.g.,</p>
+<pre><code class="java">List&lt;Character&gt; letters = new ArrayList&lt;&gt;();
+for (char c = 'A'; c &lt;= 'Z'; c++) {
+    letters.add(c);
+}
+</code></pre>
+
+<p>Write code to choose a letter at random.</p>
+<h3 class="Challenge">Remove the Last Item from a List</h3>
+
+<p>Using the following starter-code, finish the definition of <code>removeBack</code> so it finds the last item from a list and returns it. </p>
+<pre><code class="java">public static String removeBack(List&lt;String&gt; input) {
+    // TODO: return the last item (and remove it!).
+}
+
+// ...
+
+public static void main(String[] args) {
+    List&lt;String&gt; abc = new ArrayList&lt;&gt;();
+    abc.add(&quot;A&quot;); abc.add(&quot;B&quot;); abc.add(&quot;C&quot;);
+    System.out.println(removeBack()); // should print: C
+    System.out.println(abc); // should print: [A, B]
+}
+</code></pre>
+
+<p>HINT: what index is the last?</p>
+              
+            </div>
+          </div>
+          
+
+<footer>
+    
+      <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        
+          <a href="stacks-and-queues.html" class="btn btn-neutral float-right" title="📖 Stacks & Queues">Next <span class="icon icon-circle-arrow-right"></span></a>
+        
+        
+          <a href="objects-101.html" class="btn btn-neutral" title="📖 Classes & Objects"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        
+      </div>
+    
+  
+    <hr/>
+  
+    <div style="text-align: center;" role="contentinfo">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </div>
+  
+    Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  </footer>
+  
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="objects-101.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="stacks-and-queues.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

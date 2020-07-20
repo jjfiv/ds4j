@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="John Foley <johnf@middlebury.edu>">
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>📖Aside: Comparison - Data Structures in Java</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\ud83d\udcd6Aside: Comparison";
+    var mkdocs_page_input_path = "comparison.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+<script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+    <script type="text/x-mathjax-config;executed=true">
+        MathJax.Hub.Config({
+            config: ["Accessible.js", "Safe.js"],
+            errorSettings: { message: ["!"] },
+            skipStartupTypeset: true,
+            messageStyle: "none"
+        });
+    </script>
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> Data Structures in Java</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="index.html">📖 About</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="java-from-python.html">📖 Java from Python</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="objects-101.html">📖 Classes & Objects</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="list-methods.html">📖 Using Lists</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="stacks-and-queues.html">📖 Stacks & Queues</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="complexity.html">📖 Complexity</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="FSL.html">📺 Array-Based Lists</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="SLL.html">📺 Singly Linked-Lists</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="DLL.html">📺 Doubly Linked-Lists</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="ChunkyArrayList.html">📺 Chunky ArrayLists</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Lists.html">📺 Lists Conclusions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Sorting1.html">📺 Sorting (1/2): Binary Search, IsSorted, BubbleSort</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Sorting2.html">📺 Sorting (2/2): Insertion, Selection and Merge Sort</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="comparison.html">📖Aside: Comparison</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#print-these-books">Print these books</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sort-these-books">Sort these books</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#java-classes-for-sorting">Java classes for Sorting</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#what-is-a-comparablet">What is a Comparable&lt;T&gt;?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-is-a-comparatort">What is a Comparator&lt;T&gt;?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#java-8-lambdas-easier-comparators">Java 8 Lambdas (easier Comparators!).</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comparable-vs-comparator">Comparable vs. Comparator</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#why-do-compare-methods-return-an-int">Why do compare methods return an int?</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#sorting-in-the-other-direction">Sorting in the other direction:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#why-is-comparing-strings-fairly-slow">Why is comparing Strings fairly slow?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sorting-irl-how-do-i-compare">Sorting IRL: How do I compare...?</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Trees.html">📺 Intro to Trees</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="HashTables.html">📺 Hashing & HashTables</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="QuickSort.html">📺 QuickSort</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Heaps.html">📺 Heaps & HeapSort</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Balancing.html">📺 Balancing Tree Algorithms</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Graphs.html">📺 Intro to Graphs & Graph Algorithms</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">Data Structures in Java</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>📖Aside: Comparison</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/jjfiv/ds4j/tree/master/src/comparison.md"
+          class="icon icon-github"> Edit on Github</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="comparison-in-java">Comparison in Java</h1>
+<p>We sort and compare items as humans because it helps us find things faster. </p>
+<p>Consider the following objects:</p>
+<pre><code class="java">List&lt;Book&gt; books = new ArrayList&lt;&gt;();
+books.add(new Book(&quot;Pride and Prejudice&quot;, &quot;Austen, Jane&quot;, 1813));
+books.add(new Book(&quot;Emma&quot;, &quot;Austen, Jane&quot;, 1815));
+books.add(new Book(&quot;Frankenstein&quot;, &quot;Shelley, Mary&quot;, 1818));
+</code></pre>
+
+<p>They are of class <code>Book</code>, which looks roughly like this:</p>
+<pre><code class="java">public class Book {
+    String title;
+    String author;
+    int publicationYear;
+    public Book(String title, String author, int publicationYear) {
+        this.title = title;
+        this.author = author;
+        this.publicationYear = publicationYear;
+    }
+
+    // ... methods ...
+}
+</code></pre>
+
+<h3 id="print-these-books">Print these books</h3>
+<p>To move along our example, we'll need to be able to print an object of the <code>Book</code> class, so we'll override Java's <code>toString()</code> method.</p>
+<pre><code class="java">@Override
+public String toString() {
+    return &quot;**&quot; + this.title + &quot;**&quot; +
+           &quot; by &quot; + this.author + 
+           &quot; (&quot; + this.publicationYear + &quot;)&quot;;
+}
+</code></pre>
+
+<p>Now if we wrap up our <code>main</code> method with a <code>System.out.println(books);</code>, we'll get the following output:</p>
+<p><code>[**Pride and Prejudice** by Austen, Jane (1813), **Emma** by Austen, Jane (1815), **Frankenstein** by Shelley, Mary (1818)]</code></p>
+<h3 id="sort-these-books">Sort these books</h3>
+<p>If I ask you to sort these books, perhaps you do so by <code>author</code>, or by <code>title</code>, or by <code>publicationYear</code>. All the fields of this class are sortable. Maybe you ask me a follow-up question to determine how I want them sorted.</p>
+<p>In fact, that's exactly what Java does. If we add a sort statement before printing, it tells us it doesn't know how we want to <code>compare</code> book objects.</p>
+<pre><code class="java">Collections.sort(books);
+</code></pre>
+
+<p>The output is not particularly friendly.</p>
+<pre><code>Comparison.java:30: error: no suitable method found for sort(List&lt;Book&gt;)
+        Collections.sort(books);
+                   ^
+    method Collections.&lt;T#1&gt;sort(List&lt;T#1&gt;) is not applicable
+      (inference variable T#1 has incompatible bounds
+        equality constraints: Book
+        lower bounds: Comparable&lt;? super T#1&gt;)
+    method Collections.&lt;T#2&gt;sort(List&lt;T#2&gt;,Comparator&lt;? super T#2&gt;) is not applicable
+      (cannot infer type-variable(s) T#2
+        (actual and formal argument lists differ in length))
+  where T#1,T#2 are type-variables:
+    T#1 extends Comparable&lt;? super T#1&gt; declared in method &lt;T#1&gt;sort(List&lt;T#1&gt;)
+    T#2 extends Object declared in method &lt;T#2&gt;sort(List&lt;T#2&gt;,Comparator&lt;? super T#2&gt;)
+1 error
+</code></pre>
+
+<p>Basically, this boils down to needing a <code>Comparator&lt;T&gt;</code> or a <code>Comparable&lt;T&gt;</code>. But what are those?</p>
+<h2 id="java-classes-for-sorting">Java classes for Sorting</h2>
+<h3 id="what-is-a-comparablet">What is a <code>Comparable&lt;T&gt;</code>?</h3>
+<p><code>Comparable</code> is a Java <strong><em>interface</em></strong> which can be implemented on a class to define the default order of a class. Maybe you have a <code>User</code> class in your application, and you always want to sort them by their <code>String username</code>.</p>
+<pre><code class="java">public class User implements Comparable&lt;User&gt; {
+    String username;
+    // ... et. cetera ...
+
+    /** Compare this User to another. */
+    int compare(User other) {
+        return this.username.compareTo(other.username);
+    }
+}
+</code></pre>
+
+<p>Often <code>Comparable&lt;T&gt;</code> makes sense for your objects. Here, the <code>T</code> is not a class inside this class (as it is in <code>List&lt;T&gt;</code>) but actually it is the name of the class you are making <code>Comparable</code>.</p>
+<div class="Tangent">
+<p>Note that there are some advanced situations where you might make a class <code>Comparable</code> to another class besides itself, but it would be a <code>super</code>-class of the current class.</p>
+</div>
+<p>With this definition in place, we can call Java's sorting methods:</p>
+<pre><code class="java">List&lt;User&gt; users = //...
+Collections.sort(listOfUsers);
+</code></pre>
+
+<h3 id="what-is-a-comparatort">What is a <code>Comparator&lt;T&gt;</code>?</h3>
+<p>Sometimes there is not an obvious default order for a class. Let's go back to our book example.</p>
+<pre><code class="java">public class Book {
+    String title;
+    String author;
+    int publicationYear;
+    // ... snip ...
+}
+</code></pre>
+
+<p>We may want to sort by <code>title</code> at one moment, then later by <code>author</code>, and then later by <code>publicationYear</code>. With only <code>Comparable</code>, we would need to have 3 different <code>Book</code> classes and we would need to shuffle data in and out.</p>
+<p>Instead, we can make three <code>Comparator</code> classes that go with the <code>Book</code> class.</p>
+<pre><code class="java">public class Book {
+    String title;
+    String author;
+    int publicationYear;
+    // ... snip ...
+
+    /** This class lets us sort Books by title. */
+    static class TitleCmp implements Comparator&lt;Book&gt; {
+        public int compare(Book left, Book right) {
+            return left.title.compareTo(right.title);
+        }
+    }
+}
+</code></pre>
+
+<p>With a <code>Comparator</code> defined, we can then sort a list of books with that specific <code>Comparator</code> object.</p>
+<pre><code class="java">List&lt;Book&gt; books = //...
+Collections.sort(books, new Book.TitleCmp());
+System.out.println(books);
+</code></pre>
+
+<p>We now get books alphabetically by title:</p>
+<p><code>[**Emma** by Austen, Jane (1815), **Frankenstein** by Shelley, Mary (1818), **Pride and Prejudice** by Austen, Jane (1813)]</code></p>
+<h3 id="java-8-lambdas-easier-comparators">Java 8 Lambdas (easier Comparators!).</h3>
+<p>In Java 8, a simpler way to create objects from classes that only define 1 method was introduced: <strong><em>lambda</em></strong> syntax.</p>
+<p>For instance, we can print out all three orders concisely as:</p>
+<pre><code class="java">Collections.sort(books, 
+  (left, right) -&gt; left.author.compareTo(right.author));
+System.out.println(books);
+Collections.sort(books, 
+  (left, right) -&gt; left.title.compareTo(right.title));
+System.out.println(books);
+Collections.sort(books, 
+  (left, right) -&gt; Integer.compare(left.publicationYear, right.publicationYear));
+System.out.println(books);
+</code></pre>
+
+<p>But we have to know that we're defining a <code>Comparator</code> and it's method takes two arguments. Nicely enough, Java will figure out the rest.</p>
+<h3 id="comparable-vs-comparator">Comparable vs. Comparator</h3>
+<p>TL;DR: Here's a table comparing them:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Left</th>
+<th>Right</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int compare(T left, T right)</code></td>
+<td><code>left</code></td>
+<td><code>right</code></td>
+<td>Comparators take in two arguments.</td>
+</tr>
+<tr>
+<td><code>int compare(T other)</code></td>
+<td><code>this</code></td>
+<td><code>other</code></td>
+<td>Comparables take in one argument and compare to themselves.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="why-do-compare-methods-return-an-int">Why do <code>compare</code> methods return an <code>int</code>?</h3>
+<p>Compare methods are a replacement for <code>&lt;</code>, <code>&gt;</code>, and <code>==</code> for your new class, and therefore have three possible outputs.</p>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>a &lt; b</code></td>
+<td>a negative number</td>
+</tr>
+<tr>
+<td><code>a == b</code></td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>a &gt; b</code></td>
+<td>a positive numbers</td>
+</tr>
+</tbody>
+</table>
+<p>If you think about integer subtraction, <code>int compare(int a, int b) { return a - b; }</code> performs appropriately, returning numbers that are interpretable as all three comparisons!</p>
+<h4 id="sorting-in-the-other-direction">Sorting in the other direction:</h4>
+<p>Because it's an integer, we can also sort in the opposite direction, descending (a.ka., Z to A, biggest to smallest, etc.) by writing a <code>Comparator</code> or <code>Comparable</code> that takes the negative of an existing one. We also have access to <code>Collections.reverse(list)</code>.</p>
+<h3 id="why-is-comparing-strings-fairly-slow">Why is comparing Strings fairly slow?</h3>
+<p>When you have other types, you tend to be fancier. For instance, here's a sketch of how to compare two strings:</p>
+<pre><code class="java">class StrCmp implements Comparator&lt;String&gt; {
+    int compare(String left, String right) {
+        int N = left.length();
+        // Can't be equal if they have different sizes.
+        if (right.length() != N) {
+            // Shorter strings first:
+            return Integer.compare(N, right.length());
+        }
+
+        // If they have the same size...
+        for (int i = 0; i &lt; N; i++) {
+            char lc = left.charAt(i);
+            char rc = right.charAt(i);
+            // If any character is different, exit immediately with which direction!
+            if (lc != rc) {
+                return Character.compare(lc, rc);
+            }
+        }
+        // If we got to the end, they must be the same.
+        return 0;
+    }
+}
+</code></pre>
+
+<p>Never use this code; trust that <code>java.lang.String</code> is a <code>Comparable</code> already and just call <code>left.compareTo(right);</code> as we've been doing earlier.</p>
+<h2 id="sorting-irl-how-do-i-compare">Sorting IRL: How do I compare...?</h2>
+<table>
+<thead>
+<tr>
+<th>Class/Type</th>
+<th>Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>byte</code></td>
+<td><code>Byte.compare(x, y)</code></td>
+</tr>
+<tr>
+<td><code>short</code></td>
+<td><code>Short.compare(x, y)</code></td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td><code>Integer.compare(x, y)</code></td>
+</tr>
+<tr>
+<td><code>long</code></td>
+<td><code>Long.compare(x, y)</code></td>
+</tr>
+<tr>
+<td><code>char</code></td>
+<td><code>Character.compare(x, y)</code></td>
+</tr>
+<tr>
+<td><code>String</code></td>
+<td><code>x.compareTo(y)</code></td>
+</tr>
+<tr>
+<td><code>Comparable&lt;T&gt;</code></td>
+<td><code>x.compareTo(y)</code></td>
+</tr>
+<tr>
+<td>Your class here.</td>
+<td>Define it yourself.</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div>
+          
+
+<footer>
+    
+      <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        
+          <a href="Trees.html" class="btn btn-neutral float-right" title="📺 Intro to Trees">Next <span class="icon icon-circle-arrow-right"></span></a>
+        
+        
+          <a href="Sorting2.html" class="btn btn-neutral" title="📺 Sorting (2/2): Insertion, Selection and Merge Sort"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        
+      </div>
+    
+  
+    <hr/>
+  
+    <div style="text-align: center;" role="contentinfo">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </div>
+  
+    Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  </footer>
+  
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="Sorting2.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="Trees.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

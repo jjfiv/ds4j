@@ -9,7 +9,7 @@
   <meta name="author" content="John Foley <johnf@middlebury.edu>">
   
   <link rel="shortcut icon" href="img/favicon.ico">
-  <title>About - Data Structures in Java</title>
+  <title>📖 About - Data Structures in Java</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="css/theme.css" />
@@ -18,7 +18,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "About";
+    var mkdocs_page_name = "\ud83d\udcd6 About";
     var mkdocs_page_input_path = "README.md";
     var mkdocs_page_url = null;
   </script>
@@ -27,6 +27,18 @@
   <script src="js/modernizr-2.8.3.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
+<script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+    <script type="text/x-mathjax-config;executed=true">
+        MathJax.Hub.Config({
+            config: ["Accessible.js", "Safe.js"],
+            errorSettings: { message: ["!"] },
+            skipStartupTypeset: true,
+            messageStyle: "none"
+        });
+    </script>
+
   
 </head>
 
@@ -48,8 +60,14 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                 <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="index.html">About</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="index.html">📖 About</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#java-notes">Java Notes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#data-structures-notes">Data Structures Notes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#big-o-notation-and-complexity">Big-O notation and complexity</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#lists-linked-array">Lists: Linked &amp; Array</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#sorting">Sorting</a>
@@ -64,55 +82,79 @@
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="FSL.html">Array-Based Lists: FixedSizeList & GrowableList (aka ArrayList)</a>
+                    <li class="toctree-l1"><a class="reference internal" href="java-from-python.html">📖 Java from Python</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="SLL.html">Singly Linked-Lists</a>
+                    <li class="toctree-l1"><a class="reference internal" href="objects-101.html">📖 Classes & Objects</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="DLL.html">Doubly Linked-Lists</a>
+                    <li class="toctree-l1"><a class="reference internal" href="list-methods.html">📖 Using Lists</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="ChunkyArrayList.html">Chunky ArrayLists</a>
+                    <li class="toctree-l1"><a class="reference internal" href="stacks-and-queues.html">📖 Stacks & Queues</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Lists.html">Lists Conclusions</a>
+                    <li class="toctree-l1"><a class="reference internal" href="complexity.html">📖 Complexity</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Sorting1.html">Sorting (Part 1): Binary Search, IsSorted, BubbleSort</a>
+                    <li class="toctree-l1"><a class="reference internal" href="FSL.html">📺 Array-Based Lists</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Sorting2.html">Sorting (Part 2): Insertion, Selection and Merge Sort</a>
+                    <li class="toctree-l1"><a class="reference internal" href="SLL.html">📺 Singly Linked-Lists</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Trees.html">Intro to Trees</a>
+                    <li class="toctree-l1"><a class="reference internal" href="DLL.html">📺 Doubly Linked-Lists</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="HashTables.html">Hashing, HashTables, HashSets, and HashMaps</a>
+                    <li class="toctree-l1"><a class="reference internal" href="ChunkyArrayList.html">📺 Chunky ArrayLists</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="QuickSort.html">QuickSort</a>
+                    <li class="toctree-l1"><a class="reference internal" href="Lists.html">📺 Lists Conclusions</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Heaps.html">Heaps & HeapSort</a>
+                    <li class="toctree-l1"><a class="reference internal" href="Sorting1.html">📺 Sorting (1/2): Binary Search, IsSorted, BubbleSort</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Balancing.html">Balancing Tree Algorithms</a>
+                    <li class="toctree-l1"><a class="reference internal" href="Sorting2.html">📺 Sorting (2/2): Insertion, Selection and Merge Sort</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Graphs.html">Intro to Graphs & Graph Algorithms</a>
+                    <li class="toctree-l1"><a class="reference internal" href="comparison.html">📖Aside: Comparison</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Trees.html">📺 Intro to Trees</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="HashTables.html">📺 Hashing & HashTables</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="QuickSort.html">📺 QuickSort</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Heaps.html">📺 Heaps & HeapSort</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Balancing.html">📺 Balancing Tree Algorithms</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Graphs.html">📺 Intro to Graphs & Graph Algorithms</a>
                     </li>
                 </ul>
       </div>
@@ -136,7 +178,7 @@
     
       
     
-    <li>About</li>
+    <li>📖 About</li>
     <li class="wy-breadcrumbs-aside">
       
         <a href="https://github.com/jjfiv/ds4j/tree/master/src/README.md"
@@ -150,8 +192,26 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="data-structures-in-java-for-smith-college-videos">Data Structures in Java for Smith College (Videos)</h1>
-<p>This website currently begins a few weeks into the course I would usually teach, after finishing the pure-Java topics.</p>
+                <h1 id="data-structures-in-java-for-smith-college">Data Structures in Java for Smith College</h1>
+<p>This website currently focuses a few weeks into the course I would usually teach, after finishing the pure-Java topics. Most of the content is presented in video format (📺); a little over 100 videos with about 6 hours of total runtime.</p>
+<p>There is some content from earlier in the course, but that content is entirely notes-based (📖).</p>
+<h2 id="java-notes">Java Notes</h2>
+<p>This section contains a handful of notes useful for when you're "Getting started with Java".</p>
+<ul>
+<li><a href="java-from-python.html">Java from Python</a></li>
+<li><a href="objects-101.html">Objects &amp; Classes</a></li>
+<li><a href="list-methods.html">Using Java's Lists</a></li>
+</ul>
+<h2 id="data-structures-notes">Data Structures Notes</h2>
+<p>I consider stacks and queues to primarily be specific uses of lists -- rather than independent topics. Some of this is a trade-off for time in this course.</p>
+<ul>
+<li><a href="stacks-and-queues.html">Stacks &amp; Queues</a></li>
+</ul>
+<h2 id="big-o-notation-and-complexity">Big-O notation and complexity</h2>
+<p>We use big-O notation to talk about the time-complexity (and very-occasionally the space-complexity) of data structures. These notes provide an intro.</p>
+<ul>
+<li><a href="complexity.html">Complexity</a></li>
+</ul>
 <h2 id="lists-linked-array">Lists: Linked &amp; Array</h2>
 <p>We typically spend a significant amount of time on lists as the data structure family where we practice implementing every method of a data structure.</p>
 <ul>
@@ -167,6 +227,7 @@
 <li><a href="Sorting1.html">Sorting (Part 1): Binary Search, IsSorted, BubbleSort</a></li>
 <li><a href="Sorting2.html">Sorting (Part 2): Insertion, Selection and Merge Sort</a></li>
 <li><a href="QuickSort.html">QuickSort</a></li>
+<li><a href="comparison.html">Comparison Notes</a> - these notes provide an aside about how to get Java to sort your own classes and objects.</li>
 </ul>
 <h2 id="trees">Trees</h2>
 <p>Trees are broadly useful and heaps are critical to a number of applications. They also continue the journey of learning to reason about relationships between nodes and data on the way to graphs.</p>
@@ -188,11 +249,13 @@
               
             </div>
           </div>
-          <footer>
+          
+
+<footer>
     
       <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         
-          <a href="FSL.html" class="btn btn-neutral float-right" title="Array-Based Lists: FixedSizeList & GrowableList (aka ArrayList)">Next <span class="icon icon-circle-arrow-right"></span></a>
+          <a href="java-from-python.html" class="btn btn-neutral float-right" title="📖 Java from Python">Next <span class="icon icon-circle-arrow-right"></span></a>
         
         
       </div>
@@ -220,7 +283,7 @@
       
       
       
-        <span style="margin-left: 15px"><a href="FSL.html" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="java-from-python.html" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

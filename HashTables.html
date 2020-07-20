@@ -9,7 +9,7 @@
   <meta name="author" content="John Foley <johnf@middlebury.edu>">
   
   <link rel="shortcut icon" href="img/favicon.ico">
-  <title>Hashing, HashTables, HashSets, and HashMaps - Data Structures in Java</title>
+  <title>📺 Hashing & HashTables - Data Structures in Java</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="css/theme.css" />
@@ -18,7 +18,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Hashing, HashTables, HashSets, and HashMaps";
+    var mkdocs_page_name = "\ud83d\udcfa Hashing & HashTables";
     var mkdocs_page_input_path = "HashTables.md";
     var mkdocs_page_url = null;
   </script>
@@ -27,6 +27,18 @@
   <script src="js/modernizr-2.8.3.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
+<script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+    <script type="text/x-mathjax-config;executed=true">
+        MathJax.Hub.Config({
+            config: ["Accessible.js", "Safe.js"],
+            errorSettings: { message: ["!"] },
+            skipStartupTypeset: true,
+            messageStyle: "none"
+        });
+    </script>
+
   
 </head>
 
@@ -48,43 +60,67 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="index.html">About</a>
+                    <li class="toctree-l1"><a class="reference internal" href="index.html">📖 About</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="FSL.html">Array-Based Lists: FixedSizeList & GrowableList (aka ArrayList)</a>
+                    <li class="toctree-l1"><a class="reference internal" href="java-from-python.html">📖 Java from Python</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="SLL.html">Singly Linked-Lists</a>
+                    <li class="toctree-l1"><a class="reference internal" href="objects-101.html">📖 Classes & Objects</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="DLL.html">Doubly Linked-Lists</a>
+                    <li class="toctree-l1"><a class="reference internal" href="list-methods.html">📖 Using Lists</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="ChunkyArrayList.html">Chunky ArrayLists</a>
+                    <li class="toctree-l1"><a class="reference internal" href="stacks-and-queues.html">📖 Stacks & Queues</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Lists.html">Lists Conclusions</a>
+                    <li class="toctree-l1"><a class="reference internal" href="complexity.html">📖 Complexity</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Sorting1.html">Sorting (Part 1): Binary Search, IsSorted, BubbleSort</a>
+                    <li class="toctree-l1"><a class="reference internal" href="FSL.html">📺 Array-Based Lists</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Sorting2.html">Sorting (Part 2): Insertion, Selection and Merge Sort</a>
+                    <li class="toctree-l1"><a class="reference internal" href="SLL.html">📺 Singly Linked-Lists</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Trees.html">Intro to Trees</a>
+                    <li class="toctree-l1"><a class="reference internal" href="DLL.html">📺 Doubly Linked-Lists</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="ChunkyArrayList.html">📺 Chunky ArrayLists</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Lists.html">📺 Lists Conclusions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Sorting1.html">📺 Sorting (1/2): Binary Search, IsSorted, BubbleSort</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Sorting2.html">📺 Sorting (2/2): Insertion, Selection and Merge Sort</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="comparison.html">📖Aside: Comparison</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Trees.html">📺 Intro to Trees</a>
                     </li>
                 </ul>
                 <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="HashTables.html">Hashing, HashTables, HashSets, and HashMaps</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="HashTables.html">📺 Hashing & HashTables</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#what-is-a-hash-function-511">What is a hash function? (5:11)</a>
     </li>
@@ -114,19 +150,19 @@
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="QuickSort.html">QuickSort</a>
+                    <li class="toctree-l1"><a class="reference internal" href="QuickSort.html">📺 QuickSort</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Heaps.html">Heaps & HeapSort</a>
+                    <li class="toctree-l1"><a class="reference internal" href="Heaps.html">📺 Heaps & HeapSort</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Balancing.html">Balancing Tree Algorithms</a>
+                    <li class="toctree-l1"><a class="reference internal" href="Balancing.html">📺 Balancing Tree Algorithms</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Graphs.html">Intro to Graphs & Graph Algorithms</a>
+                    <li class="toctree-l1"><a class="reference internal" href="Graphs.html">📺 Intro to Graphs & Graph Algorithms</a>
                     </li>
                 </ul>
       </div>
@@ -150,7 +186,7 @@
     
       
     
-    <li>Hashing, HashTables, HashSets, and HashMaps</li>
+    <li>📺 Hashing & HashTables</li>
     <li class="wy-breadcrumbs-aside">
       
         <a href="https://github.com/jjfiv/ds4j/tree/master/src/HashTables.md"
@@ -241,14 +277,16 @@
               
             </div>
           </div>
-          <footer>
+          
+
+<footer>
     
       <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         
-          <a href="QuickSort.html" class="btn btn-neutral float-right" title="QuickSort">Next <span class="icon icon-circle-arrow-right"></span></a>
+          <a href="QuickSort.html" class="btn btn-neutral float-right" title="📺 QuickSort">Next <span class="icon icon-circle-arrow-right"></span></a>
         
         
-          <a href="Trees.html" class="btn btn-neutral" title="Intro to Trees"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+          <a href="Trees.html" class="btn btn-neutral" title="📺 Intro to Trees"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         
       </div>
     

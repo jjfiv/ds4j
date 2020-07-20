@@ -1,4 +1,7 @@
 # QuickSort
+
+QuickSort could have been kept as part of Sorting Lecture \#2, but I prefer to give the students only 1 recursive sort at a time to struggle with. Once a student has successfully coded up a recursive merge sort, discussing QuickSort feels much easier.
+
 ## Quick Idea of Quicksort (2:24)
 <iframe width="560" height="315" 
     src="https://www.youtube.com/embed/7tQRFIA5eQ0?rel=0" 

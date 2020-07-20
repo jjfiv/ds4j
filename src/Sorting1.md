@@ -1,4 +1,7 @@
 # Sorting (Part 1): Binary Search, IsSorted, BubbleSort
+
+At this point in the course, I like to do sorting before trees because it's good to talk about why "alphabetizing" data is a good thing to do. So we discuss binary search (closing out our assignment zero discussion of the guessing-game) and then introduce how to check whether a list is sorted, which naturally becomes BubbleSort when we try to fix out-of-order pairs.
+
 ## What is Divide & Conquer? (4:31)
 <iframe width="560" height="315" 
     src="https://www.youtube.com/embed/uCvdUL6bRA4?rel=0" 

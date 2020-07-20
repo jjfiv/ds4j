@@ -1,4 +1,7 @@
 # Hashing, HashTables, HashSets, and HashMaps
+
+Dictionaries are built out of HashTables in most languages. There's a pretty good reason. As this is probably students' first encounter with the concept of a ***hash***, I also try to give a sense of what these functions are used for when we're not studying hashmaps/sets/tables.
+
 ## What is a hash function? (5:11)
 <iframe width="560" height="315" 
     src="https://www.youtube.com/embed/nU_MWM4sLWI?rel=0" 

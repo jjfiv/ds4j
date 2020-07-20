@@ -1,4 +1,7 @@
 # Lists Conclusions
+
+This section has a bit of list miscellanea that I would usually scatter around the ~4 lectures we use to cover lists. They got their own section here because I was flipping the classroom this Spring.
+
 ## How are loops abstract? Iterators. (8:19)
 <iframe width="560" height="315" 
     src="https://www.youtube.com/embed/7tTMiawXnGk?rel=0" 

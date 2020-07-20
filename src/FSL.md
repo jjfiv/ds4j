@@ -1,4 +1,7 @@
 # Array-Based Lists: FixedSizeList & GrowableList (aka ArrayList)
+
+We build up to understanding ArrayLists by thinking about what an Array does and does not give us -- from ArrayWrapper (just an array) to FixedSizeList (with a ``fill`` pointer) to ``ArrayList`` which also has an exponential growth strategy.
+
 ## What's an ArrayWrapper? (2:45)
 <iframe width="560" height="315" 
     src="https://www.youtube.com/embed/jHo5dQaq3Kg?rel=0" 

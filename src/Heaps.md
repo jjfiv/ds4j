@@ -1,4 +1,7 @@
 # Heaps & HeapSort
+
+Heaps are super-useful for their applications. After we've talked about trees, (specifically BSTs) we get to see that the heap property is simpler to maintain.
+
 ## Heaps vs. Binary Search Trees (3:36)
 <iframe width="560" height="315" 
     src="https://www.youtube.com/embed/TY_Ti3bdxV0?rel=0" 

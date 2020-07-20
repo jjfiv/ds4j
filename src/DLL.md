@@ -1,4 +1,7 @@
 # Doubly Linked-Lists
+
+Doubly-Linked Lists (DLLs) are an important data structure to study and provide fast access to both the front and back of the lists.
+
 ## DLL: Intro/Symmetry (3:59)
 <iframe width="560" height="315" 
     src="https://www.youtube.com/embed/4d1fmEdEMiM?rel=0" 

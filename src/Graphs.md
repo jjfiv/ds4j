@@ -1,4 +1,9 @@
 # Intro to Graphs & Graph Algorithms
+
+The goal of this section of the course is to complete our story-telling about graph-reasoning. We don't study graphs deeply (or have an assignment to implement these algorithms).
+
+***Opinion***: However, the whole point of studying Singly-Linked-Lists, Doubly-Linked-Lists, then Trees is so we can get to Graphs. So I try to give a broad sense of how graphs are important here and how they're used. Algorithms or an AI course will cover graphs far more deeply.
+
 ## Why we study Graphs... (2:38)
 <iframe width="560" height="315" 
     src="https://www.youtube.com/embed/P1VG6W307NE?rel=0" 

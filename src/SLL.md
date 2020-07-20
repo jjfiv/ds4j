@@ -1,4 +1,7 @@
 # Singly Linked-Lists
+
+By this point in the course, we will have reviewed recursion, so that we can think of the concept of "Structural Recursion" first shown here with singly-linked-lists, and then again later with trees.
+
 ## SLL: Recursion Quick Review (3:56)
 <iframe width="560" height="315" 
     src="https://www.youtube.com/embed/OaWt9fCootA?rel=0" 

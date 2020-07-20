@@ -1,4 +1,9 @@
 # Chunky ArrayLists
+
+"Chunky" ArrayLists are a concept more or less invented by me for instructional purposes. It's an example of a practical improvement (over SLL/DLL) but where the big-O notation doesn't necessarily mirror the practical improvements. It's analagous to a BTree but as a list.
+
+Studying this topic was optional in S2020.
+
 ## ChunkyArrayList (what is it?) (3:32)
 <iframe width="560" height="315" 
     src="https://www.youtube.com/embed/E3NVQq7rL_g?rel=0" 

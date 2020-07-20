@@ -1,4 +1,7 @@
 # Sorting (Part 2): Insertion, Selection and Merge Sort
+
+This lecture introduces some other sorts (for some sort of breadth) but focuses on Merge Sort, which (***Opinion***) is the only sort any practicing Computer Scientist really needs to know deeply, since its pieces are so critical to big-data algorithms. Most of the other sorts are neat, but don't have applications to other domains.
+
 ## Insertion Sort (5:29)
 <iframe width="560" height="315" 
     src="https://www.youtube.com/embed/OlPjMKr3tzs?rel=0" 

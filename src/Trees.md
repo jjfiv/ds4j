@@ -1,4 +1,7 @@
 # Intro to Trees
+
+This is a very broad intro to Trees, which come up all over in CS, so I try to emphasize that even though you'll probably never write a BST and you'll probably only use it through the ``Map`` interface, trees come up throughout many other applications and therefore they're worth learning about.
+
 ## What is a Tree? (5:25)
 <iframe width="560" height="315" 
     src="https://www.youtube.com/embed/BXHzBQN_cbM?rel=0" 

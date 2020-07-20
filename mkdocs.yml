@@ -1,0 +1,18 @@
+site_name: "Data Structures in Java"
+docs_dir: "src"
+theme: "readthedocs"
+nav:
+    - 'About': 'README.md'
+    - 'Array-Based Lists: FixedSizeList & GrowableList (aka ArrayList)': 'FSL.md'
+    - 'Singly Linked-Lists': 'SLL.md'
+    - 'Doubly Linked-Lists': 'DLL.md'
+    - 'Chunky ArrayLists': 'ChunkyArrayList.md'
+    - 'Lists Conclusions': 'Lists.md'
+    - 'Sorting (Part 1): Binary Search, IsSorted, BubbleSort': 'Sorting1.md'
+    - 'Sorting (Part 2): Insertion, Selection and Merge Sort': 'Sorting2.md'
+    - 'Intro to Trees': 'Trees.md'
+    - 'Hashing, HashTables, HashSets, and HashMaps': 'HashTables.md'
+    - 'QuickSort': 'QuickSort.md'
+    - 'Heaps & HeapSort': 'Heaps.md'
+    - 'Balancing Tree Algorithms': 'Balancing.md'
+    - 'Intro to Graphs & Graph Algorithms': 'Graphs.md'

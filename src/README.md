@@ -1,6 +1,8 @@
 # Data Structures in Java for Smith College
 
-This website currently begins a few weeks into the course I would usually teach, after finishing the pure-Java topics.
+This website currently focuses a few weeks into the course I would usually teach, after finishing the pure-Java topics. Most of the content is presented in video format (📺); a little over 100 videos with about 6 hours of total runtime.
+
+There is some content from earlier in the course, but that content is entirely notes-based (📖).
 
 ## Java Notes
 

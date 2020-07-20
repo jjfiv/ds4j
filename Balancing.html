@@ -106,7 +106,7 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#red-black-self-balancing-algorithm-overview-225">Red-Black Self-Balancing Algorithm Overview (2:25)</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#skiplists-223">SkipLists (2:23)</a>
+    <li class="toctree-l2"><a class="reference internal" href="#treaps-skiplists-223">Treaps &amp; SkipLists (2:23)</a>
     </li>
     </ul>
                     </li>
@@ -151,6 +151,8 @@
             <div class="section">
               
                 <h1 id="balancing-tree-algorithms">Balancing Tree Algorithms</h1>
+<p>The goal of this section is not to actually study tree-balancing algorithms (that's an Algorithms topic) but to give a more concrete sense of how those algorithms work.</p>
+<p><strong><em>Opinion</em></strong>: If you find yourself heading off to implement a self-balancing binary search tree; do yourself a favor and <strong><em>don't do it</em></strong>. If you just need association, use a hashmap instead. If you do need the ordered-nature, implement a SkipList instead -- for basically the same performance, the code/algorithms are much simpler! <a href="https://dl.acm.org/doi/abs/10.1145/78973.78977">(Pugh, 1990)</a></p>
 <h2 id="why-we-balance-trees-328">Why we Balance Trees (3:28)</h2>
 <p><iframe width="560" height="315" 
     src="https://www.youtube.com/embed/XvRu4K7cS5M?rel=0" 
@@ -175,7 +177,7 @@
     frameborder="0" 
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen></iframe></p>
-<h2 id="skiplists-223">SkipLists (2:23)</h2>
+<h2 id="treaps-skiplists-223">Treaps &amp; SkipLists (2:23)</h2>
 <p><iframe width="560" height="315" 
     src="https://www.youtube.com/embed/bTWHTESdHhY?rel=0" 
     frameborder="0" 

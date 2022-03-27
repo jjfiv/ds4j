@@ -96,11 +96,11 @@ This is a classical problem, as it turns out, for which there is an easier algor
 ```java
 // Formula for triangular numbers: https://en.wikipedia.org/wiki/Triangular_number
 public static int sumSequence2(int n) {
-    return (n * (n - 1)) / 2;
+    return (n * (n + 1)) / 2;
 }
 // Again, with steps broken out.
 public static int sumSequence3(int n) {
-    int result = n * (n - 1)
+    int result = n * (n + 1)
     return result / 2;
 }
 ```

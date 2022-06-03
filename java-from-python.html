@@ -1,32 +1,28 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <meta name="author" content="John Foley <johnf@middlebury.edu>">
-  
-  <link rel="shortcut icon" href="img/favicon.ico">
-  <title>📖 Java from Python - Data Structures in Java</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
-
-  <link rel="stylesheet" href="css/theme.css" />
-  <link rel="stylesheet" href="css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "\ud83d\udcd6 Java from Python";
-    var mkdocs_page_input_path = "java-from-python.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="js/jquery-2.1.1.min.js" defer></script>
-  <script src="js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="John Foley <johnf@middlebury.edu>" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>📖 Java from Python - Data Structures in Java</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\ud83d\udcd6 Java from Python";
+        var mkdocs_page_input_path = "java-from-python.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
 <script type="text/javascript" async
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
         </script>
@@ -39,32 +35,29 @@
         });
     </script>
 
-  
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
   <div class="wy-grid-for-nav">
-
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href="." class="icon icon-home"> Data Structures in Java</a>
-        <div role="search">
+          <a href="index.html" class="icon icon-home"> Data Structures in Java
+        </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="index.html">📖 About</a>
-                    </li>
-                </ul>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="java-from-python.html">📖 Java from Python</a>
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="index.html">📖 About</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="java-from-python.html">📖 Java from Python</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#java-requires-classes-and-objects">Java requires classes and objects</a>
     </li>
@@ -121,114 +114,104 @@
     <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a>
     </li>
     </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="objects-101.html">📖 Classes & Objects</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="list-methods.html">📖 Using Lists</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="stacks-and-queues.html">📖 Stacks & Queues</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="complexity.html">📖 Complexity</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="FSL.html">📺 Array-Based Lists</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="SLL.html">📺 Singly Linked-Lists</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="DLL.html">📺 Doubly Linked-Lists</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="ChunkyArrayList.html">📺 Chunky ArrayLists</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Lists.html">📺 Lists Conclusions</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Sorting1.html">📺 Sorting (1/2): Binary Search, IsSorted, BubbleSort</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Sorting2.html">📺 Sorting (2/2): Insertion, Selection and Merge Sort</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="comparison.html">📖Aside: Comparison</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Trees.html">📺 Intro to Trees</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="HashTables.html">📺 Hashing & HashTables</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="QuickSort.html">📺 QuickSort</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Heaps.html">📺 Heaps & HeapSort</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Balancing.html">📺 Balancing Tree Algorithms</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Graphs.html">📺 Intro to Graphs & Graph Algorithms</a>
-                    </li>
-                </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="objects-101.html">📖 Classes & Objects</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="list-methods.html">📖 Using Lists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="stacks-and-queues.html">📖 Stacks & Queues</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="complexity.html">📖 Complexity</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="FSL.html">📺 Array-Based Lists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="SLL.html">📺 Singly Linked-Lists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="DLL.html">📺 Doubly Linked-Lists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="ChunkyArrayList.html">📺 Chunky ArrayLists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Lists.html">📺 Lists Conclusions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Sorting1.html">📺 Sorting (1/2): Binary Search, IsSorted, BubbleSort</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Sorting2.html">📺 Sorting (2/2): Insertion, Selection and Merge Sort</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="comparison.html">📖Aside: Comparison</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Trees.html">📺 Intro to Trees</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="HashTables.html">📺 Hashing & HashTables</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="QuickSort.html">📺 QuickSort</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Heaps.html">📺 Heaps & HeapSort</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Balancing.html">📺 Balancing Tree Algorithms</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Graphs.html">📺 Intro to Graphs & Graph Algorithms</a>
+                </li>
+              </ul>
       </div>
     </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href=".">Data Structures in Java</a>
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Data Structures in Java</a>
+        
       </nav>
-
-      
       <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".">Docs</a> &raquo;</li>
-    
-      
-    
-    <li>📖 Java from Python</li>
+    <li><a href="index.html" class="icon icon-home" alt="Docs"></a> &raquo;</li><li>📖 Java from Python</li>
     <li class="wy-breadcrumbs-aside">
-      
         <a href="https://github.com/jjfiv/ds4j/tree/master/src/java-from-python.md"
           class="icon icon-github"> Edit on Github</a>
-      
     </li>
   </ul>
-  
   <hr/>
 </div>
-          <div role="main">
-            <div class="section">
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
               
                 <h1 id="java-from-python">Java from Python</h1>
 <p>When students first come to Java from Python, they are usually a little overwhelmed. There's so much more to type to get anything done!</p>
@@ -236,7 +219,7 @@
 <p>However, I promise you: someday you will return to code that you (or someone else) have written late at night for a deadline. You may not have seen this code in months or even years. On that day, languages that are more explicit, like Java are going to be easier to read than languages like Python. Until then, come with me on this journey into being more specific.</p>
 <h2 id="java-requires-classes-and-objects">Java requires classes and objects</h2>
 <p>In Python, we could just drop code into a <code>.py</code> file and get going. Any statements we wrote would be executed when we run the file or import it. Maybe later in our classes we were taught to organize our code like the following:</p>
-<pre><code class="python"># in main.py:
+<pre><code class="language-python"># in main.py:
 def main():
    # do the real work here
    ...
@@ -244,37 +227,33 @@ def main():
 if __name__ == '__main__':
   main()
 </code></pre>
-
 <p>In python code, you can develop methods called <code>pineapple</code>, <code>apple</code>, and <code>orange</code> and put them in the <code>apple.py</code> file. Nobody's stopping you, even though you should really put it in a file called <code>fruit.py</code>.</p>
 <p>Java is a little more strict. If we want to have a class called <code>Pineapple</code>, it must be in a file called <code>Pineapple.java</code>.</p>
-<pre><code class="java">// In Pineapple.java
+<pre><code class="language-java">// In Pineapple.java
 public class Pineapple {
     public static void main(String[] args) {
         System.out.println(&quot;Pineapple is a fruit (I hope).&quot;);
     }
 }
 </code></pre>
-
 <p>For now, we will just think of everything above as a template:</p>
-<pre><code class="java">// In MYCLASS.java
+<pre><code class="language-java">// In MYCLASS.java
 public class MYCLASS {
     public static void main(String[] args) {
         // Do MYCLASS stuff.
     }
 }
 </code></pre>
-
 <p>Every time we run code, we want to wrap it in a template like this. Although not required, we always want to pick a name for <strong><em>MYCLASS</em></strong> that is capitalized -- this is a "convention" in Java, so whenever you see a capitalized word, you can be pretty sure it is a class and not another kind of variable or a method.</p>
 <h2 id="variables-have-types">Variables have types</h2>
 <p>In python, we were able to introduce variables at any point, with any name, and for any kind of value.</p>
-<pre><code class="python">x = 7
+<pre><code class="language-python">x = 7
 print(x)
 x = &quot;Seven&quot;
 print(x)
 </code></pre>
-
 <p>Java will get mad at us for trying to do the same sequence of statements: it won't let us confuse ourselves (or our readers!) by having multiple different kinds of values in the same variable. Because <code>x</code> is declared to have an integer (or <code>int</code>) in it, we can only put other integers in it!</p>
-<pre><code class="java">// We need to put the type in front of our name:
+<pre><code class="language-java">// We need to put the type in front of our name:
 int x = 7;
 System.out.println(x);
 x = &quot;Seven&quot;; // error: incompatible types: String cannot be converted to int.
@@ -282,19 +261,17 @@ System.out.println(x);
 x = 8; // This will work!
 System.out.println(x);
 </code></pre>
-
 <h3 id="types-go-before-variable-names">Types go before variable names.</h3>
-<pre><code class="java">// When creating classes:
+<pre><code class="language-java">// When creating classes:
 VariableType variableName = new VariableType();
 // When dealing with primitives, you often don't use the new keyword.
 int intName = 7;
 double doubleName = 3.5;
 String message = &quot;Hello World!&quot;;
 </code></pre>
-
 <h2 id="numeric-types-int-vs-double">Numeric Types: <code>int</code> vs. <code>double</code></h2>
 <p>Going back to our example of <code>int x</code>, there is a distinction between types of numbers that Java calls to our attention. </p>
-<pre><code class="java">// We need to put the type in front of our name:
+<pre><code class="language-java">// We need to put the type in front of our name:
 int x = 7;
 System.out.println(x);
 x = 8; // This will work!
@@ -302,35 +279,31 @@ System.out.println(x);
 x = 9.1; // error: incompatible types: possible lossy conversion from double to int
 System.out.println(x);
 </code></pre>
-
 <p>In python, we could seamlessly move between numbers with decimals, and those without, but we had to be careful with division. Java makes us be careful when we create the variable.</p>
 <h3 id="so-whats-a-double-and-whats-an-int">So what's a <code>double</code> and what's an <code>int</code>?</h3>
 <p>For a short answer, a <code>double</code> is where we store fractional numbers and those with fractional components, and it even supports exponential notation:<code>1.5, 0.0, 1e7, -2e3</code> (this is the same as in Python).</p>
 <p>An <code>int</code> or integer, on the other hand, only stores whole numbers: <code>0, 1, 10, -57, 65000</code>. When you divide integer values together, the decimal remainder disappears and the number is rounded down:</p>
-<pre><code class="java">System.out.println(7/2); // you'd think: 3.5, but prints: 3
+<pre><code class="language-java">System.out.println(7/2); // you'd think: 3.5, but prints: 3
 System.out.println(1/2); // you'd think: 0.5, but prints: 0
 </code></pre>
-
 <p>So if you care about fractions, use a <code>double</code>. If you don't care, use an <code>int</code>. We will mostly only see <code>double</code> values when we do graphics.</p>
 <h3 id="beware-of-fractional-numbers-and-equality">Beware of fractional numbers and equality!</h3>
 <p>Never ever ever use equality on fractional numbers (<code>double</code> variables). This is not an issue specific to Java, but it is possible you were never shown this in Python.</p>
-<pre><code class="python">if 0.1 * 3 == 0.3:
+<pre><code class="language-python">if 0.1 * 3 == 0.3:
     print(&quot;Math works correctly!&quot;)
 else:
     print(&quot;Math does not work!&quot;, 0.3, 0.1 * 3)
 
 # Sadly, this prints: Math does not work 0.3 0.30000000000000004
 </code></pre>
-
 <p>The same problem exists in Java:</p>
-<pre><code class="java">if (0.1 * 3 == 0.3) {
+<pre><code class="language-java">if (0.1 * 3 == 0.3) {
     System.out.println(&quot;Math works correctly!&quot;);
 } else {
     // Hmm: we use + to combine strings here in print, rather than a comma:
     System.out.println(&quot;Math does not work! 0.1 * 3 = &quot; + (0.1 * 3));
 }
 </code></pre>
-
 <p>In all cases the way to correct this check is to use math expressions. Instead of comparing <script type="math/tex"> x = y </script> directly, do something like this:</p>
 <p>
 <script type="math/tex; mode=display"> |x-y| < \epsilon </script>
@@ -340,19 +313,17 @@ else:
 <p>Switching from Python to Java has a few little traps. One of them is the power operator.</p>
 <p>In python, you can raise a number to a power using the <code>**</code> operator. In both Python and Java, the <code>^</code> operator does not perform the power operation:</p>
 <p>Power works in Python, caret does not.</p>
-<pre><code class="python">print(2 ** 8) # 256
+<pre><code class="language-python">print(2 ** 8) # 256
 print(2 ^ 8) # 10
 </code></pre>
-
 <p>Java doesn't have a power operator, but a static method that exists on the Math class:</p>
-<pre><code class="java">System.out.println(Math.pow(2, 8)); // 256.0
+<pre><code class="language-java">System.out.println(Math.pow(2, 8)); // 256.0
 // This is not a power!
 System.out.println(2 ^ 8); // 10
 </code></pre>
-
 <h3 id="aside-what-is-an-xor">Aside: What is an XOR?</h3>
 <details>
-<p><summary>What's XOR?</summary></p>
+<summary>What's XOR?</summary>
 <p>Both Python and Java agree: <code>2 ^ 8 == 10</code> and that's not what we expected from calculators and math class. But what is it?</p>
 <p>It turns out it is <strong><em>binary exclusive or</em></strong> or the XOR operator. To understand it's behavior we need to know our binary numbers:</p>
 <table>
@@ -437,38 +408,34 @@ System.out.println(2 ^ 8); // 10
 </tr>
 </tbody>
 </table>
-<pre><code class="java">// In binary:
+<pre><code class="language-java">// In binary:
 0b0010 ^ 0b1000 == 0b1010;
 // In decimal:
 2 ^ 8 == 10;
 </code></pre>
-
 <p>XOR looks at each "bit" set and creates a result where the bits are set if either of the inputs have a 1 but not both. (either-OR, but not both is why we call it <strong><em>eXclusive OR</em></strong>)</p>
 </details>
 <h3 id="javalangmath-docs">java.lang.Math docs</h3>
 <p>There are other methods on Java's <code>Math</code> class that you may find handy, much like Python's <code>math</code>. A full list can be found as on the <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html">java.lang.Math JavaDoc</a></p>
-<pre><code class="java">System.out.println(Math.abs(-7)); // prints: 7
+<pre><code class="language-java">System.out.println(Math.abs(-7)); // prints: 7
 System.out.println(Math.round(9.1)); // prints: 9
 System.out.println(Math.round(9.5)); // prints: 10
 System.out.println(Math.round(9.6)); // prints: 10
 </code></pre>
-
 <h2 id="methods-have-input-and-output-types">Methods have input and output types</h2>
 <p>We used to call these functions, but since they must be in a class in Java, we call them <strong><em>methods</em></strong>.</p>
 <h3 id="method-syntax">Method syntax</h3>
 <p>In python, making a method that multiplies a number by seven is fairly short:</p>
-<pre><code class="python">def multiply_by_seven(x):
+<pre><code class="language-python">def multiply_by_seven(x):
     return x * 7
 </code></pre>
-
 <p>Strangely, the above method works on all sorts of things:</p>
-<pre><code class="python">print(multiply_by_seven(3)) # prints: 21
+<pre><code class="language-python">print(multiply_by_seven(3)) # prints: 21
 print(multiply_by_seven(&quot;&lt;3&quot;)) # prints: &lt;3&lt;3&lt;3&lt;3&lt;3&lt;3&lt;3
 print(multiply_by_seven(3.1)) # prints: 21.7
 </code></pre>
-
 <p>In Java, we must mark the return types, and each of those functions would have to be written separately.</p>
-<pre><code class="java">// For integers:
+<pre><code class="language-java">// For integers:
 public static int multiplyBySevenA(int x) {
     return x * 7;
 }
@@ -485,7 +452,6 @@ public static String multiplyBySevenC(String input) {
     return output;
 }
 </code></pre>
-
 <p>Although it may seem tedious; you probably didn't expect that our <code>multiply_by_seven</code> could be used in 3 ways (at least!). Java makes you be more precise and explicit. You've got to <em>say what you mean</em> and <em>mean what you say</em>.</p>
 <h2 id="loops-review">Loops Review</h2>
 <p>There's a children's "game" that goes as follows:</p>
@@ -498,7 +464,7 @@ public static String multiplyBySevenC(String input) {
 <p>Everytime your poor friend says "Repeat", the instigator would tell the story again! We've seen while and for loops in Python (and in Java in the previous sections), but let's look at them a little closer.</p>
 <h3 id="while-loops">While Loops</h3>
 <p>We saw a while-loop in the <code>GuessingGame</code> example, and these are typically used to construct infinite loops, or to loop until a condition is satisfied. They are very useful when asking for user input:</p>
-<pre><code class="java">int guess = 0;
+<pre><code class="language-java">int guess = 0;
 while(guess != 13) {
     System.out.println(&quot;Type 13 to escape this loop: &quot;);
     try {
@@ -513,21 +479,19 @@ while(guess != 13) {
 }
 System.out.println(&quot;Congratulations; you typed in the magic number!&quot;);
 </code></pre>
-
 <p>We can also use while loops to build the kinds of things we do in for-loops:</p>
-<pre><code class="java">int x = 0;
+<pre><code class="language-java">int x = 0;
 while (x &lt; 10) {
     System.out.println(x);
     x += 1;
 }
 </code></pre>
-
 <div class="Think">
 <p>Does the the code snippet with the while loop above print 10?</p>
 </div>
 <h3 id="numerical-for-loops">Numerical-For Loops</h3>
 <p>When we worked with Python, if we wanted to loop over a bunch of numbers, the <code>range</code> builtin was our friend:</p>
-<pre><code class="python"># forward, regular:
+<pre><code class="language-python"># forward, regular:
 for i in range(10):
   print(i) # 0,1,2,3,4,5,6,7,8,9
 
@@ -539,9 +503,8 @@ for i in range(2,10,3):
 for i in range(10,0,-1):
   print(i) # 10,9,8,7,6,5,4,3,2,1
 </code></pre>
-
 <p>Java gives us a for loop with three pieces: a start, a while, and a step. This is a parallel to the <code>range</code> we used to use in python:</p>
-<pre><code class="java">// forward, regular:
+<pre><code class="language-java">// forward, regular:
 for (int i = 0; i &lt; 10; i++) {
     System.out.println(i); // 0,1,2,3,4,5,6,7,8,9
 }
@@ -554,34 +517,30 @@ for (int i = 10; i &gt; 0; i -= 1) {
     System.out.println(i); // 10,9,8,7,6,5,4,3,2,1
 }
 </code></pre>
-
 <h3 id="collection-for-loops">Collection-For Loops</h3>
 <p>Python has another kind of for-loop: the collection for-loop.</p>
-<pre><code class="python">for x in [1,7,4,2,1]:
+<pre><code class="language-python">for x in [1,7,4,2,1]:
     print(x)
 </code></pre>
-
 <p>And so does Java. We will talk about Java's collections in much more detail later, but:</p>
-<pre><code class="java">// import: java.util.Arrays so we can quickly make a list:
+<pre><code class="language-java">// import: java.util.Arrays so we can quickly make a list:
 for (int x : Arrays.asList(1,7,4,2,1)) {
     System.out.println(x)
 }
 </code></pre>
-
 <p>Instead of the keyword <code>in</code> that python used, Java uses the <code>:</code> and still requires a type for our loop variable (<code>x</code> here).</p>
 <h2 id="if-statements-and-decisions">If-Statements and Decisions</h2>
 <p>We need to be able to make decisions based on user input, the output of computations or really anything else that comes up in a program. With enough if-statements, you can call your program artificial intelligence or AI.</p>
-<pre><code class="java">if (success) {
+<pre><code class="language-java">if (success) {
     System.out.println(&quot;Everything went as planned.&quot;);
 } else {
     System.out.println(&quot;I've got some bad news.&quot;);
 }
 </code></pre>
-
 <p>Things to notice: in Java, you need parentheses and the curly-braces in order to have if-statements.</p>
 <h3 id="if-else-if-and-else">If, Else If, and Else</h3>
 <p>In python, we can nest else statements to handle a large number of values.</p>
-<pre><code class="python">if x == 1:
+<pre><code class="language-python">if x == 1:
     print(&quot;One&quot;)
 elif x == 2:
     print(&quot;Two&quot;)
@@ -592,9 +551,8 @@ elif x == 4:
 else:
     print(&quot;Too big!&quot;)
 </code></pre>
-
 <p>Python has this weird <code>elif</code> keyword that's a <a href="https://en.wiktionary.org/wiki/portmanteau_word#English">portmanteau</a> of <code>else</code> and <code>if</code>. Java just uses the two words directly:</p>
-<pre><code class="java">if (x == 1) {
+<pre><code class="language-java">if (x == 1) {
     System.out.println(&quot;One&quot;);
 } else if (x == 2) {
     System.out.println(&quot;Two&quot;);
@@ -606,7 +564,6 @@ else:
     System.out.println(&quot;Too big!&quot;);
 }
 </code></pre>
-
 <p>Again, sprinkle parentheses and curly-braces to make it Java.</p>
 <h3 id="boolean-operators-and-rules">Boolean Operators and Rules</h3>
 <p>Thinking about if statements tends to lead us to what can be said in if-statements. It turns out that there's a variable type: <code>boolean</code> that holds either <code>true</code> or <code>false</code> which is exactly like the <code>True</code> and <code>False</code> you would have seen in python.</p>
@@ -677,14 +634,13 @@ else:
 <h2 id="addition-subtraction-shortcuts">Addition / Subtraction shortcuts</h2>
 <p>Something else you might have seen me do in Java is use a shortcut for addition or subtraction that isn't legal in Python.</p>
 <p>In Python we can do either of the following to look up the value of <code>x</code>, add 1 and store it back in <code>x</code>:</p>
-<pre><code class="python"># full intention:
+<pre><code class="language-python"># full intention:
 x = x + 1
 # shortcut:
 x += 1
 </code></pre>
-
 <p>It turns out, in Java (and C and a few others...), we can do one more shortcut that means the same thing:</p>
-<pre><code class="java">// full intention:
+<pre><code class="language-java">// full intention:
 x = x + 1;
 // shortcut:
 x += 1;
@@ -692,9 +648,8 @@ x += 1;
 x++; // postfix
 ++x; // prefix
 </code></pre>
-
 <p>There are shortcuts for subtraction as well:</p>
-<pre><code class="java">// full intention:
+<pre><code class="language-java">// full intention:
 x = x - 1;
 // shortcut:
 x -= 1;
@@ -702,7 +657,6 @@ x -= 1;
 x--; // postfix
 --x; // prefix
 </code></pre>
-
 <h3 id="prefix-vs-postfix-aside">Prefix vs. Postfix Aside</h3>
 <p>There are some subtle differences between prefix and postfix, but you need not worry about them in the official work of this class.</p>
 <details>
@@ -711,7 +665,7 @@ x--; // postfix
 
 A Java program to distinguish between pre-and-post operations:
 
-<pre><code class="java">// Start at any value:
+<pre><code class="language-java">// Start at any value:
 int x = 7;
 
 // Postfix uses the value before changing it:
@@ -741,7 +695,6 @@ I consider these operators to be useful tricks: not to be preferred over comment
               
             </div>
           </div>
-          
 
 <footer>
     
@@ -763,8 +716,17 @@ I consider these operators to be useful tricks: not to be preferred over comment
   
     Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
   </footer>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-85LV4XM3F7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-85LV4XM3F7');
+</script>
   
-      
+          
         </div>
       </div>
 
@@ -772,18 +734,19 @@ I consider these operators to be useful tricks: not to be preferred over comment
 
   </div>
 
-  <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-      
-        <span><a href="index.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="objects-101.html" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="index.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="objects-101.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
 </div>
     <script>var base_url = '.';</script>
+    <script src="js/theme_extra.js" defer></script>
     <script src="js/theme.js" defer></script>
       <script src="search/main.js" defer></script>
     <script defer>

@@ -1,32 +1,28 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <meta name="author" content="John Foley <johnf@middlebury.edu>">
-  
-  <link rel="shortcut icon" href="img/favicon.ico">
-  <title>📖 Stacks & Queues - Data Structures in Java</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
-
-  <link rel="stylesheet" href="css/theme.css" />
-  <link rel="stylesheet" href="css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "\ud83d\udcd6 Stacks & Queues";
-    var mkdocs_page_input_path = "stacks-and-queues.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="js/jquery-2.1.1.min.js" defer></script>
-  <script src="js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="John Foley <johnf@middlebury.edu>" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>📖 Stacks & Queues - Data Structures in Java</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\ud83d\udcd6 Stacks \u0026 Queues";
+        var mkdocs_page_input_path = "stacks-and-queues.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
 <script type="text/javascript" async
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
         </script>
@@ -39,44 +35,41 @@
         });
     </script>
 
-  
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
   <div class="wy-grid-for-nav">
-
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href="." class="icon icon-home"> Data Structures in Java</a>
-        <div role="search">
+          <a href="index.html" class="icon icon-home"> Data Structures in Java
+        </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="index.html">📖 About</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="java-from-python.html">📖 Java from Python</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="objects-101.html">📖 Classes & Objects</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="list-methods.html">📖 Using Lists</a>
-                    </li>
-                </ul>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="stacks-and-queues.html">📖 Stacks & Queues</a>
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="index.html">📖 About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="java-from-python.html">📖 Java from Python</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="objects-101.html">📖 Classes & Objects</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="list-methods.html">📖 Using Lists</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="stacks-and-queues.html">📖 Stacks & Queues</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#queues-fifo">Queues (FIFO)</a>
     </li>
@@ -99,102 +92,92 @@
         </ul>
     </li>
     </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="complexity.html">📖 Complexity</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="FSL.html">📺 Array-Based Lists</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="SLL.html">📺 Singly Linked-Lists</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="DLL.html">📺 Doubly Linked-Lists</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="ChunkyArrayList.html">📺 Chunky ArrayLists</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Lists.html">📺 Lists Conclusions</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Sorting1.html">📺 Sorting (1/2): Binary Search, IsSorted, BubbleSort</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Sorting2.html">📺 Sorting (2/2): Insertion, Selection and Merge Sort</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="comparison.html">📖Aside: Comparison</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Trees.html">📺 Intro to Trees</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="HashTables.html">📺 Hashing & HashTables</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="QuickSort.html">📺 QuickSort</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Heaps.html">📺 Heaps & HeapSort</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Balancing.html">📺 Balancing Tree Algorithms</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Graphs.html">📺 Intro to Graphs & Graph Algorithms</a>
-                    </li>
-                </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="complexity.html">📖 Complexity</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="FSL.html">📺 Array-Based Lists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="SLL.html">📺 Singly Linked-Lists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="DLL.html">📺 Doubly Linked-Lists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="ChunkyArrayList.html">📺 Chunky ArrayLists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Lists.html">📺 Lists Conclusions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Sorting1.html">📺 Sorting (1/2): Binary Search, IsSorted, BubbleSort</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Sorting2.html">📺 Sorting (2/2): Insertion, Selection and Merge Sort</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="comparison.html">📖Aside: Comparison</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Trees.html">📺 Intro to Trees</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="HashTables.html">📺 Hashing & HashTables</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="QuickSort.html">📺 QuickSort</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Heaps.html">📺 Heaps & HeapSort</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Balancing.html">📺 Balancing Tree Algorithms</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Graphs.html">📺 Intro to Graphs & Graph Algorithms</a>
+                </li>
+              </ul>
       </div>
     </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href=".">Data Structures in Java</a>
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Data Structures in Java</a>
+        
       </nav>
-
-      
       <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".">Docs</a> &raquo;</li>
-    
-      
-    
-    <li>📖 Stacks & Queues</li>
+    <li><a href="index.html" class="icon icon-home" alt="Docs"></a> &raquo;</li><li>📖 Stacks & Queues</li>
     <li class="wy-breadcrumbs-aside">
-      
         <a href="https://github.com/jjfiv/ds4j/tree/master/src/stacks-and-queues.md"
           class="icon icon-github"> Edit on Github</a>
-      
     </li>
   </ul>
-  
   <hr/>
 </div>
-          <div role="main">
-            <div class="section">
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
               
                 <h1 id="stacks-queues">Stacks &amp; Queues</h1>
 <p>It turns out that lists are very useful data structures. In fact, people use lists for all sorts of behaviors. Two behaviors are so common that we have given them their own names.<br />
@@ -203,7 +186,7 @@ We will discuss these behaviors again when we are implementing our own data stru
 <p>Queues are type of list where you are always operating on opposite ends of a list. Imagine you're waiting in line for food at a dining hall or at a restaurant. You see a line of people, and so you add yourself to the back of the line. The dining hall serves people one at a time from the front of the line. You know that eventually you will reach the front.</p>
 <p>Queue behavior is sometimes referred to as "First-Come First-Serve" (FCFS) or "First-In, First-Out" (FIFO).</p>
 <p>Java has a <code>Queue</code> class, and <code>LinkedList</code> is a queue.</p>
-<pre><code class="java">Queue&lt;String&gt; diningHall = new LinkedList&lt;&gt;();
+<pre><code class="language-java">Queue&lt;String&gt; diningHall = new LinkedList&lt;&gt;();
 diningHall.add(&quot;A&quot;);
 diningHall.add(&quot;B&quot;);
 System.out.println(diningHall.remove()); // prints: A
@@ -213,14 +196,13 @@ System.out.println(diningHall.remove()); // prints: B
 System.out.println(diningHall.remove()); // prints: C
 System.out.println(diningHall.remove()); // prints: D
 </code></pre>
-
 <p>Note that we could have written this program with <code>diningHall.remove(0)</code> on a regular <code>List&lt;String&gt;</code>. Choosing <code>Queue</code> over <code>List</code> typically means that you know exactly how you are going to use this data structure and it would help readers of your code to know that, too.</p>
 <h2 id="stacks-lifo">Stacks (LIFO)</h2>
 <p>Stacks are a type of list where you are always operating on the same side. Imagine you take all your textbooks and pile them up on top of your desk. You realize that your computer science book is on the bottom, and your Spanish Language textbook is on top. You decide to do your Spanish homework first, so as not to knock over your stack of books. Stacks allow you to pile up work for later, and get back to it in a "most-recent" first manner.</p>
 <p>Stack behavior is sometimes referred to as "Last-In, First-Out" (LIFO) in symmetry to Queues which are FIFO.</p>
 <p>Java has a <code>Stack</code> class, but they don't recommend it. In fact they recommend the <code>Deque</code> interface, which is more powerful and we will discuss briefly in the next section.</p>
 <p>You can remove from the back of any list by doing: <code>list.remove(list.size()-1)</code>.</p>
-<pre><code class="java">List&lt;String&gt; books = new ArrayList&lt;&gt;();
+<pre><code class="language-java">List&lt;String&gt; books = new ArrayList&lt;&gt;();
 books.add(&quot;CS&quot;);
 books.add(&quot;Philosphy&quot;);
 System.out.println(books.remove(books.size()-1)); // prints: Philosophy
@@ -230,9 +212,8 @@ System.out.println(books.remove(books.size()-1)); // prints: Spanish
 System.out.println(books.remove(books.size()-1)); // prints: Logic
 System.out.println(books.remove(books.size()-1)); // prints: CS
 </code></pre>
-
 <p>If you really want a stack for your project, it may make sense to write a simple class to handle it:</p>
-<pre><code class="java">/** Design push/pop for more clear stack-code */
+<pre><code class="language-java">/** Design push/pop for more clear stack-code */
 public class StackOfBooks {
     /** Using an arraylist to build a Stack. */
     private List&lt;String&gt; books = new ArrayList&lt;String&gt;();
@@ -263,7 +244,6 @@ public class StackOfBooks {
     }
 }
 </code></pre>
-
 <p>Then you get some control over what happens when you try to grab a book and it's not there; and you can add methods as your algorithm or data structure grows.</p>
 <h3 id="the-stack-method-calls-and-recursion">The Stack: Method Calls and Recursion</h3>
 <p>Note that computer architecture has the notion of a stack -- in fact, we normally call that notion <strong><em>The Stack</em></strong>. This is a stack in the data structure sense, but it is implemented in a special way and stores a whole bunch of mixed data.</p>
@@ -314,7 +294,7 @@ public class StackOfBooks {
 <p>Even using a priority queue is slightly more difficult because you need to be able to sort the elements you put in; therefore, a priority queue is not quite a list.</p>
 <h3 id="aside-comparable-for-priorityqueue">Aside: Comparable for PriorityQueue</h3>
 <p>Another example of a Priority Queue in the real world is a hospital. To use Java's <code>PriorityQueue&lt;T&gt;</code> we need to implement an interface called <code>Comparable&lt;T&gt;</code> -- we haven't discussed interfaces in depth and we will return to <code>Comparable</code> later when we get to sorting.</p>
-<pre><code class="java">public class Patient implements Comparable&lt;Patient&gt; {
+<pre><code class="language-java">public class Patient implements Comparable&lt;Patient&gt; {
     long arrivalTime;
     boolean severe;
     String name;
@@ -334,7 +314,6 @@ public class StackOfBooks {
     }
 }
 </code></pre>
-
 <h3 id="concurrent-or-threadsafe-queues">Concurrent or Threadsafe Queues</h3>
 <p>In a more advanced programming class or an operating systems class, more subtleties are added to queue design: what happens if two requests come in at the same time? </p>
 <p>In the dining hall metaphor, the two students arriving at the same time will sort out for themselves which order they should be added to the queue. Elements in our lists are not so intelligent, but some queues are smarter and work to deal with such conflicts without causing the line to end up in disarray.</p>
@@ -342,7 +321,6 @@ public class StackOfBooks {
               
             </div>
           </div>
-          
 
 <footer>
     
@@ -364,8 +342,17 @@ public class StackOfBooks {
   
     Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
   </footer>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-85LV4XM3F7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-85LV4XM3F7');
+</script>
   
-      
+          
         </div>
       </div>
 
@@ -373,18 +360,19 @@ public class StackOfBooks {
 
   </div>
 
-  <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-      
-        <span><a href="list-methods.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="complexity.html" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="list-methods.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="complexity.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
 </div>
     <script>var base_url = '.';</script>
+    <script src="js/theme_extra.js" defer></script>
     <script src="js/theme.js" defer></script>
       <script src="search/main.js" defer></script>
     <script defer>

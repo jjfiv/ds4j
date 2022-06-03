@@ -1,32 +1,28 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <meta name="author" content="John Foley <johnf@middlebury.edu>">
-  
-  <link rel="shortcut icon" href="img/favicon.ico">
-  <title>📖 Classes & Objects - Data Structures in Java</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
-
-  <link rel="stylesheet" href="css/theme.css" />
-  <link rel="stylesheet" href="css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "\ud83d\udcd6 Classes & Objects";
-    var mkdocs_page_input_path = "objects-101.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="js/jquery-2.1.1.min.js" defer></script>
-  <script src="js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="John Foley <johnf@middlebury.edu>" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>📖 Classes & Objects - Data Structures in Java</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\ud83d\udcd6 Classes \u0026 Objects";
+        var mkdocs_page_input_path = "objects-101.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
 <script type="text/javascript" async
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
         </script>
@@ -39,36 +35,33 @@
         });
     </script>
 
-  
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
   <div class="wy-grid-for-nav">
-
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href="." class="icon icon-home"> Data Structures in Java</a>
-        <div role="search">
+          <a href="index.html" class="icon icon-home"> Data Structures in Java
+        </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="index.html">📖 About</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="java-from-python.html">📖 Java from Python</a>
-                    </li>
-                </ul>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="objects-101.html">📖 Classes & Objects</a>
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="index.html">📖 About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="java-from-python.html">📖 Java from Python</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="objects-101.html">📖 Classes & Objects</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#a-tale-of-two-wallets">A Tale of two Wallets</a>
         <ul>
@@ -115,116 +108,106 @@
         </ul>
     </li>
     </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="list-methods.html">📖 Using Lists</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="stacks-and-queues.html">📖 Stacks & Queues</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="complexity.html">📖 Complexity</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="FSL.html">📺 Array-Based Lists</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="SLL.html">📺 Singly Linked-Lists</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="DLL.html">📺 Doubly Linked-Lists</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="ChunkyArrayList.html">📺 Chunky ArrayLists</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Lists.html">📺 Lists Conclusions</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Sorting1.html">📺 Sorting (1/2): Binary Search, IsSorted, BubbleSort</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Sorting2.html">📺 Sorting (2/2): Insertion, Selection and Merge Sort</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="comparison.html">📖Aside: Comparison</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Trees.html">📺 Intro to Trees</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="HashTables.html">📺 Hashing & HashTables</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="QuickSort.html">📺 QuickSort</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Heaps.html">📺 Heaps & HeapSort</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Balancing.html">📺 Balancing Tree Algorithms</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Graphs.html">📺 Intro to Graphs & Graph Algorithms</a>
-                    </li>
-                </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="list-methods.html">📖 Using Lists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="stacks-and-queues.html">📖 Stacks & Queues</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="complexity.html">📖 Complexity</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="FSL.html">📺 Array-Based Lists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="SLL.html">📺 Singly Linked-Lists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="DLL.html">📺 Doubly Linked-Lists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="ChunkyArrayList.html">📺 Chunky ArrayLists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Lists.html">📺 Lists Conclusions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Sorting1.html">📺 Sorting (1/2): Binary Search, IsSorted, BubbleSort</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Sorting2.html">📺 Sorting (2/2): Insertion, Selection and Merge Sort</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="comparison.html">📖Aside: Comparison</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Trees.html">📺 Intro to Trees</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="HashTables.html">📺 Hashing & HashTables</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="QuickSort.html">📺 QuickSort</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Heaps.html">📺 Heaps & HeapSort</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Balancing.html">📺 Balancing Tree Algorithms</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Graphs.html">📺 Intro to Graphs & Graph Algorithms</a>
+                </li>
+              </ul>
       </div>
     </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href=".">Data Structures in Java</a>
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Data Structures in Java</a>
+        
       </nav>
-
-      
       <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".">Docs</a> &raquo;</li>
-    
-      
-    
-    <li>📖 Classes & Objects</li>
+    <li><a href="index.html" class="icon icon-home" alt="Docs"></a> &raquo;</li><li>📖 Classes & Objects</li>
     <li class="wy-breadcrumbs-aside">
-      
         <a href="https://github.com/jjfiv/ds4j/tree/master/src/objects-101.md"
           class="icon icon-github"> Edit on Github</a>
-      
     </li>
   </ul>
-  
   <hr/>
 </div>
-          <div role="main">
-            <div class="section">
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
               
                 <h1 id="objects-classes">Objects &amp; Classes</h1>
 <p>Object-Oriented Programming (OOP) is a way of organizing data (aka State) and code (aka methods, functions, Behavior) into classes and objects. </p>
 <p>Classes are like stamps or templates, in that you can create many instances of the class, called objects.</p>
 <h2 id="a-tale-of-two-wallets">A Tale of two Wallets</h2>
-<pre><code class="java">// I did not have a lot of money to spend in College.
+<pre><code class="language-java">// I did not have a lot of money to spend in College.
 OneCard me = new OneCard(&quot;Myself&quot;, 3.00);
 // But I had friends with lots of money. Like, $50.
 OneCard myRichFriend = new OneCard(&quot;Friend&quot;, 50.00);
@@ -244,13 +227,11 @@ myRichFriend.spend(13.87);
 // Now, they can't afford a $60 thing.
 System.out.println(myRichFriend.canAfford(60.00)); // prints: false
 </code></pre>
-
 <p>Running this code will give the following output:</p>
 <pre><code>false
 true
 false
 </code></pre>
-
 <p>In this previous example -- there are two objects of type <code>OneCard</code> which models a person's wallet. We could have written a similar sassy story using variables of type <code>double</code> but numbers don't have nice methods like <code>canAfford</code>, <code>deposit</code> and <code>spend</code>. Also, in a bigger example, we'd want to associate names with accounts and maybe keep a list of transactions.</p>
 <ol>
 <li>To build this class, I would first create a new file, named <code>OneCard.java</code>.</li>
@@ -259,7 +240,7 @@ false
 <li>Then we would design the methods: <code>canAfford</code>, <code>deposit</code> and <code>spend</code>.</li>
 </ol>
 <h3 id="creating-the-onecard-class-fields-and-a-constructor">Creating the OneCard class: fields and a constructor</h3>
-<pre><code class="java">public class OneCard {
+<pre><code class="language-java">public class OneCard {
   /**  Who owns this card? */
   String owner;
   /** How much money is stored here? */
@@ -273,25 +254,22 @@ false
   // ... methods later go here ...
 }
 </code></pre>
-
 <p>Fields live on the class itself, and by convention, we put them at the top, although we could put them anywhere.</p>
 <p>This code is the constructor. Note that it's not quite a normal method definition -- we have <code>public</code> but the name and the return-type have been merged to be <code>OneCard</code> the name of the class. This marks the method as being special: a constructor.</p>
-<pre><code class="java">public OneCard(String person, double money) {
+<pre><code class="language-java">public OneCard(String person, double money) {
     this.owner = person;
     this.balance = money;
 }
 </code></pre>
-
 <p>This method has two parameters: <code>String person</code> and <code>double money</code>. In the longer code example, <code>person</code> is first <code>"Myself"</code> and then <code>"Friend"</code>, and <code>money</code> changes similarly.</p>
 <p>We could create yet another instance of a <code>OneCard</code> by running the following code:</p>
-<pre><code class="java">OneCard empty = new OneCard(&quot;unknown&quot;, 0.00);
+<pre><code class="language-java">OneCard empty = new OneCard(&quot;unknown&quot;, 0.00);
 </code></pre>
-
 <p>Then, we have effectively created <code>empty.balance = 0.00;</code> and <code>empty.owner = "unknown";</code> by calling the constructor via the <code>new</code> keyword.</p>
 <h3 id="methods-of-onecard">Methods of OneCard</h3>
 <h4 id="deposit-and-canafford"><code>deposit</code> and <code>canAfford</code></h4>
 <p>The following is a possible definition of both <code>deposit</code> and <code>canAfford</code> on our <code>OneCard</code> class. Notice that nothing on this class uses the <code>static</code> keyword -- this is important. We want access to <code>owner</code> and <code>balance</code> in these methods; but we need to go through the <code>this</code> keyword, which is a special variable that represents the current instance of the class. When we call something like <code>me.canAfford(...)</code> the variable <code>me</code> becomes <code>this</code> for the body of the method <code>canAfford</code> in this case, that gets called.</p>
-<pre><code class="java">public class OneCard {
+<pre><code class="language-java">public class OneCard {
   /**  Who owns this card? */
   String owner;
   /** How much money is stored here? */
@@ -313,18 +291,16 @@ false
   // we'll put spend here...
 }
 </code></pre>
-
 <p>Here we get a clue to the meaning of <code>void</code> -- something that's part of the main method we've learned to type. <code>void</code> means nothing -- so when we put it in the return-value position for a method, it means that our method returns nothing. Adding money to a bank account or a <code>OneCard</code> should always succeed, so I don't know what we would return here (maybe the new balance?) but it's appropriate to return nothing.</p>
 <h4 id="spend-to-demonstrate-exceptions">spend (to demonstrate exceptions!)</h4>
 <p>Spend is an interesting operation -- because it should be able to fail if you don't have enough money. This will be true when we get to the <strong><em>data structures</em></strong> portion of the class (imagine asking to delete from an empty list, or asking for item number 5 of a 3 item list.).</p>
-<pre><code class="java">public void spend(double amount) {
+<pre><code class="language-java">public void spend(double amount) {
   if (!this.canAfford(amount)) {
     throw new RuntimeException(this.owner + &quot; can't afford &quot;+amount);
   }
   this.balance -= amount;
 }
 </code></pre>
-
 <p>There are many types of exceptions (or errors) in Java. We saw one in the GuessingGame. When we want to create our own error, and crash the program, we will use <code>RuntimeException</code>. </p>
 <table>
 <thead>
@@ -349,7 +325,7 @@ false
 </tbody>
 </table>
 <p>It may be a better design to make a spend that returns a true/false value, i.e.,</p>
-<pre><code class="java">public boolean spend(double amount) {
+<pre><code class="language-java">public boolean spend(double amount) {
   if (!this.canAfford(amount)) {
     return false;
   }
@@ -357,19 +333,17 @@ false
   return true;
 }
 </code></pre>
-
 <p>Because then you can choose how to handle not being able to spend the money in the code that is interacting with teh <code>OneCard</code> class. </p>
 <h3 id="so-then-whats-a-static-method">So then, what's a static method?</h3>
 <p>All of the methods presented above are <strong><em>instance methods</em></strong>, which means they depend on a particular instance of a class. Static methods, like the <code>public static void main(String[] args) { }</code>  we use to run code do not need or have access to a <code>this</code> special variable; and that can be a good thing!</p>
 <p>For the <code>OneCard</code> example, imagine that we wanted a set of vendors that accepted the <code>OneCard</code> as money. This would not be different for each <code>OneCard</code>, but we may want that set to be associated with the class anyway:</p>
-<pre><code class="java">public class OneCard {
+<pre><code class="language-java">public class OneCard {
   // everything we've seen.
 
   /** Supported set of vendors -- can't have any duplicates, so we use a set rather than a list. */
   public static Set&lt;String&gt; supportedStores = new HashSet&lt;String&gt;();
 }
 </code></pre>
-
 <p>We will discuss sets further in the future -- think of them as lists that keep items unique and remove duplicates for you!</p>
 <h2 id="vocabulary">Vocabulary</h2>
 <p>In this section, we try to define a lot of common terminology for classes.</p>
@@ -399,7 +373,7 @@ false
 <p>Constructors run code on the <code>new</code> keyword. The parameters they ask for are used to set up the class (but they need not be instance variables.)</p>
 <h4 id="parameters-vs-variables">Parameters vs. Variables</h4>
 <p>In a hypothetical <code>Dog</code> class, we might want to store the age of a dog in so-called "dog-years" rather than "human-years."</p>
-<pre><code class="java">public class Dog {
+<pre><code class="language-java">public class Dog {
   private int dogYears;
   public String name;
 
@@ -415,7 +389,6 @@ false
   }
 }
 </code></pre>
-
 <p>By then writing methods for getting to our <code>dogYears</code> instance variable, users of this class don't need to know whether human years or dog years are stored, merely that they have access to both!</p>
 <h3 id="class-keywords">Class keywords</h3>
 <p>There are a lot of other keywords that go with classes. I'll try to define them here.</p>
@@ -448,7 +421,7 @@ false
 </table>
 <p>Methods that are in a class (because Java requires everything to be in a class) but don't really need to be are called <strong><em>static methods</em></strong>. You can also have <strong><em>static variables</em></strong>. Notably, you don't need to create an object in order to call them.</p>
 <p>This is useful to Java as well as to us -- recall our main method:</p>
-<pre><code class="java">public static void main(String[] args) {
+<pre><code class="language-java">public static void main(String[] args) {
   // public
   //        lets us start the program from outside the file it is defined.
   // static 
@@ -463,7 +436,6 @@ false
               
             </div>
           </div>
-          
 
 <footer>
     
@@ -485,8 +457,17 @@ false
   
     Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
   </footer>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-85LV4XM3F7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-85LV4XM3F7');
+</script>
   
-      
+          
         </div>
       </div>
 
@@ -494,18 +475,19 @@ false
 
   </div>
 
-  <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-      
-        <span><a href="java-from-python.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="list-methods.html" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="java-from-python.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="list-methods.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
 </div>
     <script>var base_url = '.';</script>
+    <script src="js/theme_extra.js" defer></script>
     <script src="js/theme.js" defer></script>
       <script src="search/main.js" defer></script>
     <script defer>

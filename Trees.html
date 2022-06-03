@@ -1,32 +1,28 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <meta name="author" content="John Foley <johnf@middlebury.edu>">
-  
-  <link rel="shortcut icon" href="img/favicon.ico">
-  <title>📺 Intro to Trees - Data Structures in Java</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
-
-  <link rel="stylesheet" href="css/theme.css" />
-  <link rel="stylesheet" href="css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "\ud83d\udcfa Intro to Trees";
-    var mkdocs_page_input_path = "Trees.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="js/jquery-2.1.1.min.js" defer></script>
-  <script src="js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="John Foley <johnf@middlebury.edu>" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>📺 Intro to Trees - Data Structures in Java</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\ud83d\udcfa Intro to Trees";
+        var mkdocs_page_input_path = "Trees.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
 <script type="text/javascript" async
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
         </script>
@@ -39,84 +35,81 @@
         });
     </script>
 
-  
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
   <div class="wy-grid-for-nav">
-
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href="." class="icon icon-home"> Data Structures in Java</a>
-        <div role="search">
+          <a href="index.html" class="icon icon-home"> Data Structures in Java
+        </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="index.html">📖 About</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="java-from-python.html">📖 Java from Python</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="objects-101.html">📖 Classes & Objects</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="list-methods.html">📖 Using Lists</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="stacks-and-queues.html">📖 Stacks & Queues</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="complexity.html">📖 Complexity</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="FSL.html">📺 Array-Based Lists</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="SLL.html">📺 Singly Linked-Lists</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="DLL.html">📺 Doubly Linked-Lists</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="ChunkyArrayList.html">📺 Chunky ArrayLists</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Lists.html">📺 Lists Conclusions</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Sorting1.html">📺 Sorting (1/2): Binary Search, IsSorted, BubbleSort</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Sorting2.html">📺 Sorting (2/2): Insertion, Selection and Merge Sort</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="comparison.html">📖Aside: Comparison</a>
-                    </li>
-                </ul>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="Trees.html">📺 Intro to Trees</a>
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="index.html">📖 About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="java-from-python.html">📖 Java from Python</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="objects-101.html">📖 Classes & Objects</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="list-methods.html">📖 Using Lists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="stacks-and-queues.html">📖 Stacks & Queues</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="complexity.html">📖 Complexity</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="FSL.html">📺 Array-Based Lists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="SLL.html">📺 Singly Linked-Lists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="DLL.html">📺 Doubly Linked-Lists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="ChunkyArrayList.html">📺 Chunky ArrayLists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Lists.html">📺 Lists Conclusions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Sorting1.html">📺 Sorting (1/2): Binary Search, IsSorted, BubbleSort</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Sorting2.html">📺 Sorting (2/2): Insertion, Selection and Merge Sort</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="comparison.html">📖Aside: Comparison</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="Trees.html">📺 Intro to Trees</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#what-is-a-tree-525">What is a Tree? (5:25)</a>
     </li>
@@ -145,147 +138,148 @@
     <li class="toctree-l2"><a class="reference internal" href="#trees-recap-126">Trees Recap (1:26)</a>
     </li>
     </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="HashTables.html">📺 Hashing & HashTables</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="QuickSort.html">📺 QuickSort</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Heaps.html">📺 Heaps & HeapSort</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Balancing.html">📺 Balancing Tree Algorithms</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="Graphs.html">📺 Intro to Graphs & Graph Algorithms</a>
-                    </li>
-                </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="HashTables.html">📺 Hashing & HashTables</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="QuickSort.html">📺 QuickSort</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Heaps.html">📺 Heaps & HeapSort</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Balancing.html">📺 Balancing Tree Algorithms</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Graphs.html">📺 Intro to Graphs & Graph Algorithms</a>
+                </li>
+              </ul>
       </div>
     </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href=".">Data Structures in Java</a>
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Data Structures in Java</a>
+        
       </nav>
-
-      
       <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".">Docs</a> &raquo;</li>
-    
-      
-    
-    <li>📺 Intro to Trees</li>
+    <li><a href="index.html" class="icon icon-home" alt="Docs"></a> &raquo;</li><li>📺 Intro to Trees</li>
     <li class="wy-breadcrumbs-aside">
-      
         <a href="https://github.com/jjfiv/ds4j/tree/master/src/Trees.md"
           class="icon icon-github"> Edit on Github</a>
-      
     </li>
   </ul>
-  
   <hr/>
 </div>
-          <div role="main">
-            <div class="section">
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
               
                 <h1 id="intro-to-trees">Intro to Trees</h1>
 <p>This is a very broad intro to Trees, which come up all over in CS, so I try to emphasize that even though you'll probably never write a BST and you'll probably only use it through the <code>Map</code> interface, trees come up throughout many other applications and therefore they're worth learning about.</p>
 <h2 id="what-is-a-tree-525">What is a Tree? (5:25)</h2>
-<p><iframe width="560" height="315" 
+<iframe width="560" height="315" 
     src="https://www.youtube.com/embed/BXHzBQN_cbM?rel=0" 
     frameborder="0" 
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen></iframe></p>
+    allowfullscreen></iframe>
+
 <h2 id="tree-terminology-214">Tree Terminology (2:14)</h2>
-<p><iframe width="560" height="315" 
+<iframe width="560" height="315" 
     src="https://www.youtube.com/embed/jwAbiT1k3Ls?rel=0" 
     frameborder="0" 
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen></iframe></p>
+    allowfullscreen></iframe>
+
 <h2 id="tree-node-definition-141">Tree Node Definition (1:41)</h2>
-<p><iframe width="560" height="315" 
+<iframe width="560" height="315" 
     src="https://www.youtube.com/embed/2zEaAu02FIY?rel=0" 
     frameborder="0" 
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen></iframe></p>
+    allowfullscreen></iframe>
+
 <h2 id="tree-node-definition-drawing-105">Tree Node Definition Drawing (1:05)</h2>
-<p><iframe width="560" height="315" 
+<iframe width="560" height="315" 
     src="https://www.youtube.com/embed/h9mUcW8flVo?rel=0" 
     frameborder="0" 
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen></iframe></p>
+    allowfullscreen></iframe>
+
 <h2 id="trees-to-treeset-and-treemap-448">Trees to TreeSet and TreeMap (4:48)</h2>
-<p><iframe width="560" height="315" 
+<iframe width="560" height="315" 
     src="https://www.youtube.com/embed/aFT1_ANwUc8?rel=0" 
     frameborder="0" 
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen></iframe></p>
+    allowfullscreen></iframe>
+
 <h2 id="complexity-in-treeset-and-treemap-517">Complexity in TreeSet and TreeMap (5:17)</h2>
-<p><iframe width="560" height="315" 
+<iframe width="560" height="315" 
     src="https://www.youtube.com/embed/hLicdIckigE?rel=0" 
     frameborder="0" 
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen></iframe></p>
+    allowfullscreen></iframe>
+
 <h2 id="balancing-and-tree-operation-complexity-415">Balancing and Tree Operation Complexity (4:15)</h2>
-<p><iframe width="560" height="315" 
+<iframe width="560" height="315" 
     src="https://www.youtube.com/embed/_g5A_Ve9kM4?rel=0" 
     frameborder="0" 
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen></iframe></p>
+    allowfullscreen></iframe>
+
 <h2 id="what-is-a-binary-tree-btree-641">What is a Binary Tree? (+BTree) (6:41)</h2>
-<p><iframe width="560" height="315" 
+<iframe width="560" height="315" 
     src="https://www.youtube.com/embed/lFRkLWRAjl4?rel=0" 
     frameborder="0" 
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen></iframe></p>
+    allowfullscreen></iframe>
+
 <h2 id="tree-traverals-and-math-expression-example-645">Tree Traverals and Math Expression Example (6:45)</h2>
-<p><iframe width="560" height="315" 
+<iframe width="560" height="315" 
     src="https://www.youtube.com/embed/uVgkrN8mIvk?rel=0" 
     frameborder="0" 
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen></iframe></p>
+    allowfullscreen></iframe>
+
 <h2 id="code-for-in-order-tree-traversal-341">Code for In-Order Tree Traversal (3:41)</h2>
-<p><iframe width="560" height="315" 
+<iframe width="560" height="315" 
     src="https://www.youtube.com/embed/ycPWLqnTn5Q?rel=0" 
     frameborder="0" 
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen></iframe></p>
+    allowfullscreen></iframe>
+
 <h2 id="code-for-tree-traversals-all-at-once-443">Code for Tree Traversals (all at once) (4:43)</h2>
-<p><iframe width="560" height="315" 
+<iframe width="560" height="315" 
     src="https://www.youtube.com/embed/jVzkMLfD00k?rel=0" 
     frameborder="0" 
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen></iframe></p>
+    allowfullscreen></iframe>
+
 <h2 id="applications-of-trees-458">Applications of Trees (4:58)</h2>
-<p><iframe width="560" height="315" 
+<iframe width="560" height="315" 
     src="https://www.youtube.com/embed/qVGUxfOx524?rel=0" 
     frameborder="0" 
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen></iframe></p>
+    allowfullscreen></iframe>
+
 <h2 id="trees-recap-126">Trees Recap (1:26)</h2>
-<p><iframe width="560" height="315" 
+<iframe width="560" height="315" 
     src="https://www.youtube.com/embed/CRoq3x0U_Oo?rel=0" 
     frameborder="0" 
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen></iframe></p>
+    allowfullscreen></iframe>
               
             </div>
           </div>
-          
 
 <footer>
     
@@ -307,8 +301,17 @@
   
     Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
   </footer>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-85LV4XM3F7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-85LV4XM3F7');
+</script>
   
-      
+          
         </div>
       </div>
 
@@ -316,18 +319,19 @@
 
   </div>
 
-  <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-      
-        <span><a href="comparison.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="HashTables.html" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="comparison.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="HashTables.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
 </div>
     <script>var base_url = '.';</script>
+    <script src="js/theme_extra.js" defer></script>
     <script src="js/theme.js" defer></script>
       <script src="search/main.js" defer></script>
     <script defer>
